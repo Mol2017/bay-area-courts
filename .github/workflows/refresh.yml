@@ -1,0 +1,60 @@
+name: Refresh court data
+
+on:
+  schedule:
+    # Every Monday at 14:00 UTC (07:00 PT during PDT, 06:00 PT during PST).
+    - cron: "0 14 * * 1"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      # EasyOCR downloads ~100 MB of model weights to ~/.EasyOCR on first
+      # use. Cache them so weekly cron runs don't re-download.
+      - name: Cache EasyOCR models
+        uses: actions/cache@v4
+        with:
+          path: ~/.EasyOCR
+          key: easyocr-models-v1
+
+      - name: Install Python deps
+        run: pip install -r requirements.txt
+
+      - name: Ensure Playwright Chromium is installed
+        # The scrapers prefer system Chrome (channel="chrome"), which is
+        # preinstalled on ubuntu-latest runners. We still install Playwright's
+        # bundled chromium as a fallback.
+        run: python -m playwright install --with-deps chromium
+
+      - name: Run scrapers
+        run: python scripts/run_all_scrapers.py
+
+      - name: Merge
+        run: python scripts/merge.py
+
+      - name: Commit refreshed data
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          # Stage data; the images dir may not exist if no Newark scrape ran.
+          git add data/raw/*.json data/merged.json
+          if [ -d data/raw/images ]; then
+            git add data/raw/images
+          fi
+          if git diff --staged --quiet; then
+            echo "No data changes."
+          else
+            git commit -m "data: refresh court schedules"
+            git push
+          fi

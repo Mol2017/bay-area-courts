@@ -1,0 +1,5 @@
+playwright>=1.40
+# easyocr is used by scrapers/newark_community_center.py to OCR the Silliman
+# Center weekly schedule poster from Facebook. Pulls in torch + cv2 (~600MB
+# total). If you don't need the Newark scraper, comment this out.
+easyocr>=1.7

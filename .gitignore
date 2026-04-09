@@ -1,0 +1,25 @@
+# Python bytecode
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+
+# Virtualenvs
+.venv/
+venv/
+env/
+
+# Editor / OS junk
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# Playwright MCP cache (if any)
+.playwright-mcp/
+
+# Local server/test logs (none get committed; just in case)
+*.log
+
+# data/raw/*.json + data/merged.json ARE committed — they're the build
+# artifacts that the GitHub Pages frontend reads. Keep them in git.

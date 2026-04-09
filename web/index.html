@@ -1,0 +1,111 @@
+<!--
+  South Bay Area Drop-In Basketball — single-page calendar UI.
+
+  Layout: header (title + week nav + Refresh) above a sidebar (Summary,
+  Sources, About) and the main calendar (sticky day headers + scrollable
+  24-hour grid). All event rendering, popup positioning, and source
+  filtering live in app.js. Styles in style.css. Data is fetched at load
+  time from ../data/merged.json.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>South Bay Area Drop In Basketball</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <div class="header-left">
+        <div class="title">🏀 South Bay Area Drop In Basketball</div>
+        <div class="week-nav">
+          <button id="todayBtn" class="btn nav-today">Today</button>
+          <button id="prevWeekBtn" class="btn nav-arrow" aria-label="Previous week">‹</button>
+          <button id="nextWeekBtn" class="btn nav-arrow" aria-label="Next week">›</button>
+        </div>
+        <div id="weekTitle" class="week-title"></div>
+      </div>
+      <div class="header-right">
+        <button id="refreshBtn" class="btn primary" title="Wipe data, re-scrape, re-merge">↻ Refresh</button>
+        <span id="updatedAt" class="updated"></span>
+      </div>
+    </header>
+
+    <aside class="sidebar">
+      <div class="card">
+        <h3>Summary</h3>
+        <div id="stats" class="stats"></div>
+      </div>
+
+      <div class="card">
+        <h3>Sources</h3>
+        <div id="legend"></div>
+      </div>
+
+      <div class="card">
+        <h3>About</h3>
+        <div class="note">
+          Drop-in indoor basketball sessions in the south bay area. Click
+          <strong>Refresh</strong> to re-scrape and reload.
+        </div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <div class="calendar-grid-wrap">
+        <div class="day-header-row" id="dayHeaderRow">
+          <div class="blank"></div>
+          <!-- day headers injected by JS -->
+        </div>
+        <div class="calendar-grid">
+          <div class="time-col" id="timeCol"></div>
+          <div class="day-col" data-day="0"></div>
+          <div class="day-col" data-day="1"></div>
+          <div class="day-col" data-day="2"></div>
+          <div class="day-col" data-day="3"></div>
+          <div class="day-col" data-day="4"></div>
+          <div class="day-col" data-day="5"></div>
+          <div class="day-col" data-day="6"></div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Google Calendar-style event popup. Anchored near the clicked event. -->
+  <div id="popupBackdrop" hidden></div>
+  <div id="eventPopup" class="event-popup" hidden role="dialog" aria-modal="true">
+    <div id="popupColorBar" class="popup-color-bar"></div>
+    <button id="popupClose" class="popup-close" aria-label="Close">×</button>
+    <h2 id="popupVenue" class="popup-venue"></h2>
+    <p id="popupActivity" class="popup-activity"></p>
+    <div class="popup-row">
+      <span class="popup-icon">🕒</span>
+      <span id="popupWhen"></span>
+    </div>
+    <div class="popup-row" id="popupAddressRow">
+      <span class="popup-icon">📍</span>
+      <span id="popupAddress"></span>
+    </div>
+    <div class="popup-row" id="popupCourtsRow">
+      <span class="popup-icon">🏟️</span>
+      <div id="popupCourts" class="popup-courts"></div>
+    </div>
+    <div class="popup-row" id="popupCostRow">
+      <span class="popup-icon">💲</span>
+      <span id="popupCost"></span>
+    </div>
+    <div class="popup-row" id="popupNotesRow">
+      <span class="popup-icon">📝</span>
+      <span id="popupNotes" class="popup-notes-text"></span>
+    </div>
+    <div class="popup-actions">
+      <a id="popupLink" class="popup-link" target="_blank" rel="noopener">View source ↗</a>
+    </div>
+  </div>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

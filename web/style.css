@@ -1,0 +1,397 @@
+/*
+ * Stylesheet for the South Bay Area Drop-In Basketball calendar.
+ *
+ * Layout zones (in document order):
+ *   .app           — top-level grid: header / sidebar / main
+ *   .header        — title, week navigation, Refresh button
+ *   .sidebar       — Summary / Sources / About cards
+ *   .main          — sticky day headers + scrollable 24-hour calendar grid
+ *   .event         — one positioned tile per session in the grid
+ *   .event-popup   — Google-Calendar-style click popup with #popupBackdrop
+ *
+ * Tunable layout via CSS custom properties on :root below. JS in app.js
+ * mirrors HOUR_HEIGHT, START_HOUR, END_HOUR, DEFAULT_VIEW_START_HOUR — keep
+ * those in sync with --hour-height, --start-hour, --end-hour, --hours.
+ */
+:root {
+  --bg: #ffffff;
+  --panel: #f8f9fa;
+  --border: #e0e0e0;
+  --text: #202124;
+  --muted: #5f6368;
+  --accent: #1a73e8;
+  --sidebar-width: 300px;
+  --header-height: 64px;
+  --hour-height: 64px;
+  --time-col-width: 72px;
+  --day-cols: 7;
+  /* Calendar renders the full 24-hour day; default scroll position snaps
+     to 8 AM via JS so the standard view is still 8 AM – 10 PM. */
+  --start-hour: 0;
+  --end-hour: 24;
+  --hours: 24;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--text); }
+
+.app {
+  display: grid;
+  grid-template-columns: var(--sidebar-width) 1fr;
+  grid-template-rows: var(--header-height) 1fr;
+  height: 100vh;
+}
+
+.header {
+  grid-column: 1 / 3;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  border-bottom: 1px solid var(--border);
+  background: #fff;
+  z-index: 5;
+}
+.header-left, .header-right { display: flex; align-items: center; gap: 14px; }
+.title { font-size: 18px; font-weight: 700; }
+.week-title { font-size: 16px; font-weight: 700; color: var(--text); }
+
+.week-nav { display: flex; align-items: center; gap: 6px; }
+.btn.nav-today {
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 13px;
+}
+.btn.nav-arrow {
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border-radius: 50%;
+  font-size: 18px;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn.nav-arrow:hover { background: var(--panel); }
+
+.btn {
+  border: 1px solid var(--border);
+  background: #fff;
+  border-radius: 8px;
+  padding: 8px 14px;
+  font-size: 14px;
+  cursor: pointer;
+  font-family: inherit;
+}
+.btn:hover { background: var(--panel); }
+.btn.primary {
+  background: #d93025; /* Material red */
+  color: #fff;
+  border-color: #d93025;
+}
+.btn.primary:hover { background: #b1271b; }
+.btn.primary.loading { opacity: 0.6; cursor: wait; }
+.updated { font-size: 12px; color: var(--muted); }
+
+.sidebar {
+  border-right: 1px solid var(--border);
+  background: #fff;
+  padding: 16px;
+  overflow: auto;
+}
+
+.card {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 14px;
+  background: var(--panel);
+  margin-bottom: 16px;
+}
+.card h3 {
+  margin: 0 0 10px;
+  font-size: 12px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  user-select: none;
+}
+.legend-item input { margin: 0; }
+.legend-item.disabled { opacity: 0.4; }
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex: 0 0 12px;
+}
+.legend-label {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 4px 6px;
+  flex: 1;
+  min-width: 0;
+}
+.legend-label strong { font-weight: 600; }
+.legend-city {
+  font-size: 12px;
+  color: var(--muted);
+}
+.legend-price {
+  font-size: 12px;
+  color: var(--muted);
+  margin-left: auto;
+}
+
+.stats { display: grid; gap: 6px; font-size: 14px; }
+.stats strong { color: var(--text); }
+
+.note { font-size: 13px; color: var(--muted); line-height: 1.5; }
+
+.main {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: #fff;
+}
+
+.day-header-row {
+  display: grid;
+  grid-template-columns: var(--time-col-width) repeat(var(--day-cols), 1fr);
+  border-bottom: 1px solid var(--border);
+  background: #fff;
+  /* Sit inside .calendar-grid-wrap so the columns share the same width as
+     .calendar-grid (no scrollbar gap). Stick to the top while the user
+     scrolls vertically. */
+  position: sticky;
+  top: 0;
+  z-index: 3;
+  min-width: 1120px;
+}
+.blank { border-right: 1px solid var(--border); background: #fff; }
+
+.day-header {
+  padding: 10px 8px;
+  text-align: center;
+  border-right: 1px solid var(--border);
+}
+.weekday {
+  font-size: 11px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.date {
+  margin-top: 6px;
+  font-size: 22px;
+  font-weight: 500;
+  width: 38px;
+  height: 38px;
+  line-height: 38px;
+  display: inline-block;
+  border-radius: 50%;
+}
+.day-header.active .date {
+  background: var(--accent);
+  color: #fff;
+}
+
+.calendar-grid-wrap {
+  overflow: auto;
+  position: relative;
+  height: 100%;
+}
+
+.calendar-grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: var(--time-col-width) repeat(var(--day-cols), 1fr);
+  min-width: 1120px;
+}
+
+.time-col {
+  border-right: 1px solid var(--border);
+  background: #fff;
+  position: relative;
+  z-index: 1;
+}
+.time-slot {
+  height: var(--hour-height);
+  /* No border-bottom here. The day-col background already draws each hour
+     line via repeating-linear-gradient at the layout position; if we drew
+     a border here it would be shifted by translateY below and produce a
+     6 px-offset twin line beside every gradient line. */
+  padding: 0 8px;
+  font-size: 11px;
+  color: var(--muted);
+  text-align: right;
+  /* Visually nudge the label up so it sits next to its hour line instead
+     of at the top of the band. Layout-affecting properties stay untouched. */
+  transform: translateY(-6px);
+}
+
+.day-col {
+  position: relative;
+  border-right: 1px solid var(--border);
+  background: repeating-linear-gradient(
+    to bottom,
+    #fff 0,
+    #fff calc(var(--hour-height) - 1px),
+    var(--border) var(--hour-height)
+  );
+  min-height: calc(var(--hour-height) * var(--hours));
+}
+.day-col.active { background-color: rgba(26, 115, 232, 0.04); }
+
+.event {
+  position: absolute;
+  border-radius: 8px;
+  padding: 6px 8px;
+  font-size: 12px;
+  overflow: hidden;
+  border-left: 4px solid rgba(0, 0, 0, 0.18);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  transition: transform 0.05s ease;
+}
+.event:hover { transform: scale(1.01); z-index: 3; box-shadow: 0 4px 10px rgba(0,0,0,0.12); }
+.event-title {
+  font-weight: 700;
+  margin-bottom: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.event-time, .event-meta {
+  font-size: 11px;
+  color: #3c4043;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ─── Google Calendar-style event popup ──────────────────────────── */
+
+#popupBackdrop {
+  position: fixed;
+  inset: 0;
+  background: transparent;
+  z-index: 50;
+}
+
+.event-popup {
+  position: fixed;
+  z-index: 51;
+  width: min(420px, calc(100vw - 32px));
+  background: #fff;
+  border-radius: 12px;
+  box-shadow:
+    0 1px 3px rgba(0, 0, 0, 0.12),
+    0 8px 24px rgba(0, 0, 0, 0.18);
+  padding: 22px 24px 18px;
+  font-size: 14px;
+  overflow: hidden;
+}
+
+.popup-color-bar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 6px;
+  background: var(--accent);
+}
+
+.popup-close {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+  color: var(--muted);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.popup-close:hover { background: var(--panel); color: var(--text); }
+
+.popup-venue {
+  margin: 0 32px 4px 6px;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--text);
+}
+.popup-activity {
+  margin: 0 0 14px 6px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.popup-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin: 10px 0 10px 6px;
+  font-size: 14px;
+  line-height: 1.45;
+  color: var(--text);
+}
+.popup-icon {
+  flex: 0 0 18px;
+  text-align: center;
+  font-size: 14px;
+  opacity: 0.8;
+  margin-top: 1px;
+}
+
+.popup-courts {
+  display: grid;
+  gap: 4px;
+}
+.popup-court-line {
+  font-size: 13.5px;
+}
+.popup-court-line strong {
+  font-weight: 600;
+  margin-right: 6px;
+}
+
+.popup-notes-text {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.popup-actions {
+  margin: 16px 0 2px 36px;
+}
+.popup-link {
+  font-size: 13px;
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+}
+.popup-link:hover { text-decoration: underline; }
+
+@media (max-width: 900px) {
+  .app { grid-template-columns: 1fr; }
+  .sidebar { display: none; }
+  .header { grid-column: 1 / 2; }
+}
