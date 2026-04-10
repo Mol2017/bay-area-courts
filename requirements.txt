@@ -3,3 +3,7 @@ playwright>=1.40
 # Center weekly schedule poster from Facebook. Pulls in torch + cv2 (~600MB
 # total). If you don't need the Newark scraper, comment this out.
 easyocr>=1.7
+# beautifulsoup4 parses Facebook page HTML when the Newark scraper runs in
+# the SCRAPERAPI_KEY=... mode (proxied fetch on GitHub Actions). The
+# Playwright local path doesn't need it.
+beautifulsoup4>=4.12

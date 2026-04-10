@@ -153,6 +153,57 @@ So the same Refresh button works for:
   this machine in ~2 minutes
 - **GitHub Pages** — trigger the workflow in ~5 minutes
 
+## (Optional) Make Newark refresh on GitHub Actions too
+
+**The problem.** Facebook detects GitHub Actions runner IPs as bots and
+serves a generic Meta marketing image instead of the real Newark Rec page.
+Without a fix, every cron run produces 0 Newark sessions and the
+defensive-write in `scripts/run_all_scrapers.py` preserves the last
+locally-committed Newark data — i.e. Newark only refreshes when you run
+the scraper from your own residential IP.
+
+**The fix.** The Newark scraper supports a second backend that routes
+through [ScraperAPI](https://www.scraperapi.com/)'s residential-IP proxy.
+When the `SCRAPERAPI_KEY` env var is set, the scraper uses an HTTP-only
+path that fetches the FB page through the proxy, parses it with
+BeautifulSoup, and only downloads the actual image binary directly (the FB
+CDN doesn't IP-block image fetches). When unset, the scraper falls back to
+the existing direct-Playwright path used for local development.
+
+### One-time setup
+
+1. **Sign up for ScraperAPI**: https://www.scraperapi.com/. The free tier
+   gives you 1000 credits/month, no credit card required.
+2. **Copy your API key** from the dashboard.
+3. **Add it as a repository secret**:
+   GitHub → Settings → Secrets and variables → Actions → **New repository
+   secret** → Name: `SCRAPERAPI_KEY`, Value: paste the key.
+4. **Re-run the workflow**:
+   Actions → "Refresh court data" → Run workflow.
+
+That's it. The next cron run reads the secret as an env var and the
+Newark scraper logs `(backend: ScraperAPI)` instead of `(backend:
+Playwright)`. Without the secret it logs Playwright and Newark won't
+refresh on the runner — but the other three sources still do.
+
+### Cost / quota
+
+Each Newark scrape makes 2 ScraperAPI premium-proxy requests (FB feed +
+photo permalink). Premium + JS rendering is 25 credits per request, so
+one scrape = ~50 credits. Weekly cron + a handful of manual refreshes per
+month is ~250 credits/month — well within the 1000-credit free tier.
+
+The image download itself goes direct to the FB CDN, **not** via the
+proxy, so it doesn't burn credits.
+
+### What if I don't add the secret?
+
+The deployment still works. You'll get fresh AFG / RMCC / PCC data on
+every cron, but Newark stays at whatever was last committed manually.
+You can refresh Newark by running `python scripts/serve.py` locally and
+clicking the in-page Refresh button (which uses the local Playwright
+path), then `git push` the new data file.
+
 ## Troubleshooting
 
 ### "Can't detect GitHub repo"
