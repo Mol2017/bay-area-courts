@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-09T23:23:26-07:00",
+  "generated_at": "2026-04-09T23:34:11-07:00",
   "window_start": "2026-04-06",
   "window_end": "2026-04-20",
   "weeks": 2,
@@ -428,21 +428,15 @@
     {
       "venue": "Silliman Center",
       "start": "2026-04-10T06:00-07:00",
-      "end": "2026-04-10T21:00-07:00",
+      "end": "2026-04-10T19:00-07:00",
       "activity": "Drop-In Basketball",
       "address": "6800 Mowry Ave, Newark, CA 94560",
       "lat": null,
       "lon": null,
       "cost": "$14 per person (drop-in)",
-      "notes": "Combined Court 1 + Court 2 availability at Silliman Center. Court 1: 6:00 AM\u20139:00 PM. Court 2: 6:00 AM\u20137:00 PM. Scraped from weekly Newark Rec Facebook poster (EasyOCR).",
+      "notes": "Combined Court 2 availability at Silliman Center. Court 2: 6:00 AM\u20137:00 PM. Scraped from weekly Newark Rec Facebook poster (EasyOCR).",
       "source_event_url": "https://www.facebook.com/Newarkrec/",
       "courts": [
-        {
-          "name": "Court 1",
-          "windows": [
-            "6:00 AM\u20139:00 PM"
-          ]
-        },
         {
           "name": "Court 2",
           "windows": [
@@ -451,6 +445,33 @@
         }
       ],
       "source": "newark_community_center"
+    },
+    {
+      "venue": "Arrillaga Family Gymnasium",
+      "start": "2026-04-10T07:30-07:00",
+      "end": "2026-04-10T12:00-07:00",
+      "activity": "Court Rental",
+      "address": "600 Alma St, Menlo Park, CA 94025",
+      "lat": null,
+      "lon": null,
+      "cost": "Free drop-in (or $88.00/hr to reserve)",
+      "notes": "Combined Court 1 + Court 2 availability at Arrillaga Family Gymnasium. Court 1: 7:30 AM\u201312:00 PM. Court 2: 1:00 PM\u20134:00 PM. CatchCorner lists these as $88/hr rentals in 2-hour blocks, but if no one books a slot the court is open as free drop-in during the same window.",
+      "source_event_url": "https://www.catchcorner.com/facility-page/embedded/rental/arrillaga-family-gymnasium-city-of-menlo-park/Basketball",
+      "courts": [
+        {
+          "name": "Court 1",
+          "windows": [
+            "7:30 AM\u201312:00 PM"
+          ]
+        },
+        {
+          "name": "Court 2",
+          "windows": [
+            "1:00 PM\u20134:00 PM"
+          ]
+        }
+      ],
+      "source": "arrillaga_family_gymnasium"
     },
     {
       "venue": "Red Morton Community Center",
@@ -496,9 +517,15 @@
       "lat": null,
       "lon": null,
       "cost": "Free drop-in (or $88.00/hr to reserve)",
-      "notes": "Combined Court 2 availability at Arrillaga Family Gymnasium. Court 2: 1:00 PM\u20134:00 PM. CatchCorner lists these as $88/hr rentals in 2-hour blocks, but if no one books a slot the court is open as free drop-in during the same window.",
+      "notes": "Combined Court 1 + Court 2 availability at Arrillaga Family Gymnasium. Court 1: 7:30 AM\u201312:00 PM. Court 2: 1:00 PM\u20134:00 PM. CatchCorner lists these as $88/hr rentals in 2-hour blocks, but if no one books a slot the court is open as free drop-in during the same window.",
       "source_event_url": "https://www.catchcorner.com/facility-page/embedded/rental/arrillaga-family-gymnasium-city-of-menlo-park/Basketball",
       "courts": [
+        {
+          "name": "Court 1",
+          "windows": [
+            "7:30 AM\u201312:00 PM"
+          ]
+        },
         {
           "name": "Court 2",
           "windows": [

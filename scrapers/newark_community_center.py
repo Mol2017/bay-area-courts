@@ -13,30 +13,33 @@ an *image* in a Facebook post. The pipeline:
 5. Emit Sessions for (day, court, window) entries inside the 2-week data
    window. Older posters' dates fall outside the window and are dropped.
 
-This scraper only works from a residential IP. GitHub Actions runner IPs
-are flagged as bots by Facebook (FB serves a generic marketing image
-instead of the real page). The defensive-write in run_all_scrapers.py
-ensures the previously-committed Newark data is preserved when the
-scraper returns 0 sessions on the runner. To refresh Newark data, run
-the scraper locally and push the result.
+The schedule poster is fetched via an RSS mirror of the Facebook page
+(rss.app) so the scraper needs no Playwright, no login, no proxy, and
+works identically on residential IPs and GitHub Actions runners.
+
+Pipeline:
+1. Fetch the RSS XML (plain HTTP, ~10 KB).
+2. Find items whose title matches "Court Availability" or "Court Schedule".
+3. Download the poster image from the signed FB CDN URL embedded in each
+   item (the CDN accepts these signed URLs from any IP).
+4. Run EasyOCR to reconstruct the court schedule table.
+5. Compute the per-day Court 1 + Court 2 union and emit Sessions.
 
 Newark Rec only ever publishes past or current weeks — there's no advance
 schedule — so this scraper only ever contributes current-week sessions in
 practice. The other three scrapers fill in the next-week column.
 
 Dependencies:
-- playwright
-- easyocr
+- easyocr  (for OCR of the poster image)
 """
 from __future__ import annotations
 
 import re
 import sys
 import urllib.request
+import xml.etree.ElementTree as ET
 from datetime import datetime, timedelta
 from pathlib import Path
-
-from playwright.sync_api import sync_playwright
 
 from base import (
     PACIFIC,
@@ -44,147 +47,71 @@ from base import (
     ScrapeResult,
     Session,
     data_window_range,
-    polite_goto,
     write_result,
 )
 
 SOURCE_NAME = "newark_community_center"
 SOURCE_URL = "https://www.facebook.com/Newarkrec/"
+RSS_URL = "https://rss.app/feeds/4ob5vMivToevVCvG.xml"
 VENUE = "Silliman Center"
 ADDRESS = "6800 Mowry Ave, Newark, CA 94560"
 
 IMAGES_DIR = REPO_ROOT / "data" / "raw" / "images"
-MIN_POSTS = 4              # collect at least this many Silliman posts
-MAX_PAGEDOWN = 30          # cap so a sparse feed can't loop forever
-PAGEDOWN_PAUSE_S = 1.0
-VIEWPORT = {"width": 1280, "height": 1500}  # tall viewport so more posts fit
 
-# ── stage 1: scroll feed and collect Silliman post images ─────────────────
+# ── stage 1: fetch Silliman poster images from RSS ────────────────────────
+
+COURT_TITLE_RE = re.compile(
+    r"Court\s+Availab|Court\s+Sched", re.IGNORECASE
+)
 
 
-def _collect_silliman_posts(page) -> list[dict]:
-    """Scroll the feed to surface multiple Silliman posters; return their
-    image src + permalink anchors.
+def _fetch_rss_items() -> list[dict]:
+    """Fetch the RSS mirror of the Newark Rec FB page and return items
+    whose title mentions "Court Availability" or "Court Schedule".
 
-    Facebook gates logged-out users behind two dialogs:
-      1. An initial sign-in modal with a Close button — we click it.
-      2. After ~1 lazy-load batch, a "See more on Facebook" wall with no
-         close button. Once that wall fires there's no way to scroll further
-         without authentication.
-
-    To squeeze the most posts out of the gap between (1) and (2), we use:
-      - a tall viewport so more posts fit per screen
-      - small PageDown keystrokes (smaller jumps trigger lazy-load multiple
-        times before the wall fires; window.scrollTo(0, end) only fires it
-        once and then locks)
+    Each returned dict has keys: ``title``, ``image_url``, ``pub_date``.
+    The ``image_url`` is the signed FB CDN URL embedded in the ``<description>``
+    or ``<media:content>`` element — it works from any IP because the CDN
+    honours the signature, not the caller's IP.
     """
-    polite_goto(page, SOURCE_URL, wait_until="domcontentloaded")
-    import time as _time
-
-    try:
-        page.wait_for_selector(
-            "img[alt*='Silliman' i], img[alt*='Gilliman' i], img[alt*='WEEKLY COURT' i]",
-            timeout=20000,
-            state="attached",
-        )
-    except Exception as e:  # noqa: BLE001
-        print(f"[{SOURCE_NAME}] no Silliman image on feed: {e}", file=sys.stderr)
-        return []
-
-    # Step 1: dismiss the initial sign-in modal exactly once. We click it
-    # rather than removing it from the DOM, because removing all dialogs
-    # also kills FB's content wrapper.
-    try:
-        page.locator('[role="dialog"] [aria-label="Close"]').first.click(timeout=3000)
-        _time.sleep(0.8)
-    except Exception:
-        pass  # No initial dialog → fine
-
-    sil_count_js = (
-        "() => [...document.querySelectorAll('img')]"
-        ".filter(i => /silliman|gilliman|weekly court/i.test(i.alt||'')"
-        " && i.naturalWidth >= 200).length"
+    print(f"[{SOURCE_NAME}] fetching RSS feed…", file=sys.stderr)
+    req = urllib.request.Request(
+        RSS_URL,
+        headers={"User-Agent": "bay-area-courts/1.0"},
     )
+    with urllib.request.urlopen(req, timeout=30) as r:
+        xml_bytes = r.read()
 
-    # Step 2: PageDown until we hit MIN_POSTS or stop growing.
-    last_count = -1
-    stagnant = 0
-    for _ in range(MAX_PAGEDOWN):
-        page.keyboard.press("PageDown")
-        _time.sleep(PAGEDOWN_PAUSE_S)
-        cnt = page.evaluate(sil_count_js)
-        if cnt >= MIN_POSTS:
-            break
-        if cnt == last_count:
-            stagnant += 1
-            if stagnant >= 5:  # five consecutive no-ops → wall is up
-                break
-        else:
-            stagnant = 0
-            last_count = cnt
+    root = ET.fromstring(xml_bytes)
+    out: list[dict] = []
+    for item in root.iter("item"):
+        title = (item.findtext("title") or "").strip()
+        if not COURT_TITLE_RE.search(title):
+            continue
+        # Image URL: prefer <description> img src (has the signed CDN URL),
+        # fall back to <media:content> or <enclosure>.
+        desc = item.findtext("description") or ""
+        img_match = re.search(r'<img[^>]+src="([^"]+)"', desc)
+        image_url = img_match.group(1) if img_match else None
+        if not image_url:
+            # Try media:content
+            for ns in (
+                "{http://search.yahoo.com/mrss/}",
+                "{http://purl.org/rss/1.0/modules/content/}",
+            ):
+                mc = item.find(f"{ns}content")
+                if mc is not None and mc.get("url"):
+                    image_url = mc.get("url")
+                    break
+        if not image_url:
+            enc = item.find("enclosure")
+            if enc is not None:
+                image_url = enc.get("url")
+        pub_date = (item.findtext("pubDate") or "").strip()
+        out.append({"title": title, "image_url": image_url, "pub_date": pub_date})
 
-    # Step 3: collect the posts that loaded.
-    return page.evaluate(
-        """
-        () => {
-          const seen = new Map();
-          const imgs = [...document.querySelectorAll('img')]
-            .filter(i => /silliman|gilliman|weekly court/i.test(i.alt || ''))
-            .filter(i => i.naturalWidth >= 200);
-          for (const img of imgs) {
-            if (seen.has(img.src)) continue;
-            // Walk up to find the photo permalink anchor.
-            let permalink = null;
-            let p = img;
-            for (let k = 0; k < 8 && p; k++) {
-              if (p.tagName === 'A' && p.href && p.href.includes('/photo')) {
-                permalink = p.href; break;
-              }
-              p = p.parentElement;
-            }
-            // Walk up further to find the post caption.
-            let captionText = '';
-            p = img;
-            for (let k = 0; k < 14 && p; k++) {
-              if (p.parentElement) p = p.parentElement;
-              const t = (p.innerText || '').slice(0, 1500);
-              if (/Silliman Center Weekly Court (Availability|Schedule)/i.test(t)) {
-                captionText = t; break;
-              }
-            }
-            seen.set(img.src, {
-              feedSrc: img.src,
-              permalink,
-              captionText,
-              altText: img.alt,
-              w: img.naturalWidth,
-              h: img.naturalHeight,
-            });
-          }
-          return [...seen.values()];
-        }
-        """
-    )
-
-
-def _largest_image_on_permalink(page, permalink: str) -> str | None:
-    """Visit the photo permalink and pick the largest img src on it."""
-    polite_goto(page, permalink, wait_until="domcontentloaded")
-    try:
-        page.wait_for_selector("img", timeout=15000, state="attached")
-    except Exception:  # noqa: BLE001
-        pass
-    return page.evaluate(
-        """
-        () => {
-          const imgs = [...document.querySelectorAll('img')]
-            .filter(i => i.naturalWidth >= 600);
-          if (!imgs.length) return null;
-          imgs.sort((a, b) => (b.naturalWidth * b.naturalHeight) - (a.naturalWidth * a.naturalHeight));
-          return imgs[0].src;
-        }
-        """
-    )
+    print(f"[{SOURCE_NAME}] RSS: {len(out)} court-schedule items", file=sys.stderr)
+    return out
 
 
 def _download_image(url: str, label: str) -> Path:
@@ -598,63 +525,6 @@ def _build_day_sessions(
 # ── orchestration ─────────────────────────────────────────────────────────
 
 
-def _label_for(idx: int, today: datetime, post: dict) -> str:
-    cap_range = parse_caption_range(post.get("captionText", ""))
-    parts = [today.strftime("%Y-%m-%d"), f"post{idx + 1}"]
-    if cap_range:
-        parts.append(cap_range[0].strftime("%m-%d"))
-    return "_".join(parts)
-
-
-def _gather_via_playwright(today: datetime) -> list[tuple[Path, dict]]:
-    """Local-dev path: drive a real Chrome via Playwright, find Silliman
-    posts, get high-res image URLs, download them.
-    """
-    downloaded: list[tuple[Path, dict]] = []
-    with sync_playwright() as pw:
-        browser = pw.chromium.launch(headless=True, channel="chrome")
-        ctx = browser.new_context(
-            user_agent=(
-                "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 "
-                "(KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
-            ),
-            viewport=VIEWPORT,
-        )
-        page = ctx.new_page()
-
-        posts = _collect_silliman_posts(page)
-        print(
-            f"[{SOURCE_NAME}] found {len(posts)} Silliman posts on feed",
-            file=sys.stderr,
-        )
-        if not posts:
-            browser.close()
-            return downloaded
-
-        for idx, post in enumerate(posts):
-            image_url = post.get("feedSrc")
-            if post.get("permalink"):
-                higher = _largest_image_on_permalink(page, post["permalink"])
-                if higher:
-                    image_url = higher
-            if not image_url:
-                continue
-            label = _label_for(idx, today, post)
-            try:
-                path = _download_image(image_url, label)
-            except Exception as e:  # noqa: BLE001
-                print(f"[{SOURCE_NAME}] download failed: {e}", file=sys.stderr)
-                continue
-            downloaded.append((path, post))
-            print(
-                f"[{SOURCE_NAME}] downloaded {path.relative_to(REPO_ROOT)}",
-                file=sys.stderr,
-            )
-
-        browser.close()
-    return downloaded
-
-
 def scrape() -> ScrapeResult:
     result = ScrapeResult(source=SOURCE_NAME, source_url=SOURCE_URL)
     window_start, window_end = data_window_range()
@@ -664,7 +534,35 @@ def scrape() -> ScrapeResult:
         file=sys.stderr,
     )
 
-    downloaded = _gather_via_playwright(today)
+    # Stage 1: fetch court-schedule items from the RSS mirror.
+    rss_items = _fetch_rss_items()
+    if not rss_items:
+        print(f"[{SOURCE_NAME}] no court-schedule items in RSS", file=sys.stderr)
+        return result
+
+    # Stage 2: download each poster image and pair it with its caption.
+    downloaded: list[tuple[Path, dict]] = []
+    for idx, item in enumerate(rss_items):
+        image_url = item.get("image_url")
+        if not image_url:
+            continue
+        cap_range = parse_caption_range(item.get("title", ""))
+        label_parts = [today.strftime("%Y-%m-%d"), f"post{idx + 1}"]
+        if cap_range:
+            label_parts.append(cap_range[0].strftime("%m-%d"))
+        label = "_".join(label_parts)
+        try:
+            path = _download_image(image_url, label)
+        except Exception as e:  # noqa: BLE001
+            print(f"[{SOURCE_NAME}] download failed: {e}", file=sys.stderr)
+            continue
+        # Build a post dict compatible with the OCR stage below.
+        post = {"captionText": item.get("title", ""), "feedSrc": image_url}
+        downloaded.append((path, post))
+        print(
+            f"[{SOURCE_NAME}] downloaded {path.relative_to(REPO_ROOT)}",
+            file=sys.stderr,
+        )
 
     if not downloaded:
         return result
