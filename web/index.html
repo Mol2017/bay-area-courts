@@ -107,5 +107,30 @@
 
   <script src="config.js"></script>
   <script src="app.js"></script>
+
+  <!-- Visitor counter badge (bottom-left corner) -->
+  <div id="visitorBadge" class="visitor-badge" title="Total page views">
+    <span class="visitor-icon">👁</span>
+    <span id="visitorCount">–</span>
+  </div>
+
+  <!-- GoatCounter analytics — free, no cookies, privacy-friendly.
+       Sign up at https://www.goatcounter.com to get your site code.
+       Dashboard: https://bayareacourts.goatcounter.com -->
+  <script data-goatcounter="https://bayareacourts.goatcounter.com/count"
+          async src="//gc.zgo.at/count.js"></script>
+  <script>
+    // Fetch total page views from GoatCounter's public counter endpoint
+    // and display in the bottom-left badge.
+    (async function () {
+      try {
+        const r = await fetch("https://bayareacourts.goatcounter.com/counter/" +
+          encodeURIComponent(location.pathname) + ".json");
+        if (!r.ok) return;
+        const d = await r.json();
+        document.getElementById("visitorCount").textContent = d.count || "0";
+      } catch (_) { /* GoatCounter not set up yet — badge stays "–" */ }
+    })();
+  </script>
 </body>
 </html>
