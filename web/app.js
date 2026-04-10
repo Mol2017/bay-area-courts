@@ -759,7 +759,13 @@ async function tryLocalRefresh() {
     return { handled: false };
   }
 
-  if (res.status === 404) {
+  // Static hosts have no /api/refresh endpoint at all and respond with one
+  // of these statuses (depending on the host):
+  //   • 404 — most servers (no such file)
+  //   • 405 — GitHub Pages (POST not allowed on a read-only static host)
+  //   • 501 — some CDNs (POST method "not implemented")
+  // In all of those cases we fall through to the GitHub Actions API path.
+  if (res.status === 404 || res.status === 405 || res.status === 501) {
     return { handled: false };
   }
   if (res.status === 409) {
