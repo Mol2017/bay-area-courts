@@ -38,13 +38,6 @@ jobs:
         run: python -m playwright install --with-deps chromium
 
       - name: Run scrapers
-        env:
-          # Optional: residential-IP proxy for the Newark scraper. Without
-          # this, FB serves a placeholder image to GitHub Actions runners
-          # and the Newark scraper produces 0 sessions (the defensive write
-          # in run_all_scrapers.py preserves the previously-committed data).
-          # Add it under Settings → Secrets and variables → Actions.
-          SCRAPERAPI_KEY: ${{ secrets.SCRAPERAPI_KEY }}
         run: python scripts/run_all_scrapers.py
 
       - name: Merge

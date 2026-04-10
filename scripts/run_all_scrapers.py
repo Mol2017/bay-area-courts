@@ -84,7 +84,16 @@ def main() -> int:
         except Exception as e:  # noqa: BLE001
             failures += 1
             print(f"  FAILED: {e}")
-    return 1 if failures else 0
+    # Always exit 0 so the merge + commit steps in the GitHub Actions
+    # workflow still run even when one scraper crashes. The defensive
+    # write above protects against data loss; the merge step will
+    # pick up whatever raw files were successfully written (plus any
+    # preserved from the previous commit). A non-zero exit would cause
+    # GH Actions to skip merge + commit entirely, preventing the
+    # successful scrapers' data from reaching the live site.
+    if failures:
+        print(f"\n{failures} scraper(s) failed — continuing to merge anyway")
+    return 0
 
 
 if __name__ == "__main__":

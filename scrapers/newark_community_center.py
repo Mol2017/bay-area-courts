@@ -13,35 +13,25 @@ an *image* in a Facebook post. The pipeline:
 5. Emit Sessions for (day, court, window) entries inside the 2-week data
    window. Older posters' dates fall outside the window and are dropped.
 
-Two fetch backends are supported, selected at runtime:
-
-  • SCRAPERAPI_KEY env var SET → ScraperAPI premium (residential IPs).
-    Used in GitHub Actions where the runner IP is flagged as a bot by
-    Facebook (FB serves a generic Meta marketing image instead of the real
-    page from datacenter IPs). Each cron run costs 2 premium credits + 0
-    for the direct CDN image download (FB CDN doesn't IP-block).
-
-  • SCRAPERAPI_KEY UNSET → direct Playwright with system Chrome. Used for
-    local development; works fine on residential IPs.
-
-The two backends share the OCR + session-building stages. The split is
-done at the "fetch HTML / find image URL / download image" boundary.
+This scraper only works from a residential IP. GitHub Actions runner IPs
+are flagged as bots by Facebook (FB serves a generic marketing image
+instead of the real page). The defensive-write in run_all_scrapers.py
+ensures the previously-committed Newark data is preserved when the
+scraper returns 0 sessions on the runner. To refresh Newark data, run
+the scraper locally and push the result.
 
 Newark Rec only ever publishes past or current weeks — there's no advance
 schedule — so this scraper only ever contributes current-week sessions in
 practice. The other three scrapers fill in the next-week column.
 
 Dependencies:
-- playwright       (only used for the local-dev path)
-- easyocr          (always)
-- beautifulsoup4   (only used for the SCRAPERAPI_KEY path)
+- playwright
+- easyocr
 """
 from __future__ import annotations
 
-import os
 import re
 import sys
-import urllib.parse
 import urllib.request
 from datetime import datetime, timedelta
 from pathlib import Path
@@ -68,119 +58,6 @@ MIN_POSTS = 4              # collect at least this many Silliman posts
 MAX_PAGEDOWN = 30          # cap so a sparse feed can't loop forever
 PAGEDOWN_PAUSE_S = 1.0
 VIEWPORT = {"width": 1280, "height": 1500}  # tall viewport so more posts fit
-
-# ── ScraperAPI proxy backend (used in CI) ─────────────────────────────────
-
-SCRAPERAPI_KEY = os.environ.get("SCRAPERAPI_KEY", "").strip() or None
-SCRAPERAPI_BASE = "http://api.scraperapi.com/"
-SILLIMAN_ALT_RE = re.compile(r"silliman|gilliman|weekly court", re.IGNORECASE)
-
-
-def _scraperapi_get(target_url: str, render: bool = True) -> bytes:
-    """Fetch ``target_url`` via ScraperAPI premium (residential IP).
-
-    Premium proxy + JS rendering = 25 credits per request on the free tier
-    (1000 credits/month). The Newark scraper makes 2 such requests per run
-    (one for the FB feed, one for the photo permalink), so a weekly cron
-    plus a few manual refreshes fits comfortably under the free quota.
-    """
-    if not SCRAPERAPI_KEY:
-        raise RuntimeError("SCRAPERAPI_KEY not set")
-    params = {
-        "api_key": SCRAPERAPI_KEY,
-        "url": target_url,
-        "premium": "true",  # residential IPs
-    }
-    if render:
-        params["render"] = "true"
-    api_url = SCRAPERAPI_BASE + "?" + urllib.parse.urlencode(params)
-    req = urllib.request.Request(api_url)
-    with urllib.request.urlopen(req, timeout=180) as r:
-        return r.read()
-
-
-def _collect_silliman_posts_via_api() -> list[dict]:
-    """Same shape as ``_collect_silliman_posts`` but powered by ScraperAPI.
-
-    Returns a list of ``{feedSrc, permalink, captionText, altText}`` dicts.
-    Without an interactive browser we can't scroll/dismiss dialogs, so we
-    only see whatever posts FB renders on the initial page load — typically
-    one or two for a logged-out viewer.
-    """
-    print(f"[{SOURCE_NAME}] fetching FB page via ScraperAPI…", file=sys.stderr)
-    html = _scraperapi_get(SOURCE_URL, render=True).decode("utf-8", errors="replace")
-    print(
-        f"[{SOURCE_NAME}] got {len(html)} bytes of rendered HTML",
-        file=sys.stderr,
-    )
-
-    from bs4 import BeautifulSoup
-
-    soup = BeautifulSoup(html, "html.parser")
-    out: list[dict] = []
-    seen: set[str] = set()
-    for img in soup.find_all("img", alt=SILLIMAN_ALT_RE):
-        src = (img.get("src") or "").strip()
-        if not src or src in seen:
-            continue
-        seen.add(src)
-
-        # Walk up to find the photo permalink anchor.
-        permalink: str | None = None
-        node = img.parent
-        for _ in range(8):
-            if node is None:
-                break
-            if node.name == "a" and "/photo" in (node.get("href") or ""):
-                href = node["href"]
-                permalink = href if href.startswith("http") else f"https://www.facebook.com{href}"
-                break
-            node = node.parent
-
-        # Walk up to find the surrounding caption text.
-        caption = ""
-        node = img.parent
-        for _ in range(14):
-            if node is None:
-                break
-            text = node.get_text(" ", strip=True)[:1500]
-            if "Silliman Center Weekly Court" in text:
-                caption = text
-                break
-            node = node.parent
-
-        out.append(
-            {
-                "feedSrc": src,
-                "permalink": permalink,
-                "captionText": caption,
-                "altText": img.get("alt", ""),
-            }
-        )
-    return out
-
-
-def _largest_image_via_api(permalink: str) -> str | None:
-    """Visit the photo permalink via ScraperAPI and pick the highest-res
-    image. The "original" version on the FB CDN has no ``stp=*_s\\d+x\\d+``
-    resize parameter — we prefer that one and fall back to the largest
-    visible version.
-    """
-    html = _scraperapi_get(permalink, render=True).decode("utf-8", errors="replace")
-    from bs4 import BeautifulSoup
-
-    soup = BeautifulSoup(html, "html.parser")
-    candidates: list[str] = []
-    for img in soup.find_all("img"):
-        src = (img.get("src") or "").strip()
-        if "fbcdn" in src and src not in candidates:
-            candidates.append(src)
-    # Prefer images without an explicit thumbnail resize.
-    for src in candidates:
-        if not re.search(r"stp=[^&]*_s\d+x\d+", src):
-            return src
-    return candidates[0] if candidates else None
-
 
 # ── stage 1: scroll feed and collect Silliman post images ─────────────────
 
@@ -778,63 +655,16 @@ def _gather_via_playwright(today: datetime) -> list[tuple[Path, dict]]:
     return downloaded
 
 
-def _gather_via_scraperapi(today: datetime) -> list[tuple[Path, dict]]:
-    """CI / production path: fetch through ScraperAPI's residential proxy,
-    parse HTML with BeautifulSoup, download the image directly from FB
-    CDN (which doesn't IP-block).
-    """
-    downloaded: list[tuple[Path, dict]] = []
-    posts = _collect_silliman_posts_via_api()
-    print(
-        f"[{SOURCE_NAME}] found {len(posts)} Silliman posts via ScraperAPI",
-        file=sys.stderr,
-    )
-    if not posts:
-        return downloaded
-
-    for idx, post in enumerate(posts):
-        image_url = post.get("feedSrc")
-        if post.get("permalink"):
-            try:
-                higher = _largest_image_via_api(post["permalink"])
-                if higher:
-                    image_url = higher
-            except Exception as e:  # noqa: BLE001
-                print(
-                    f"[{SOURCE_NAME}] permalink fetch failed: {e}",
-                    file=sys.stderr,
-                )
-        if not image_url:
-            continue
-        label = _label_for(idx, today, post)
-        try:
-            path = _download_image(image_url, label)
-        except Exception as e:  # noqa: BLE001
-            print(f"[{SOURCE_NAME}] download failed: {e}", file=sys.stderr)
-            continue
-        downloaded.append((path, post))
-        print(
-            f"[{SOURCE_NAME}] downloaded {path.relative_to(REPO_ROOT)}",
-            file=sys.stderr,
-        )
-    return downloaded
-
-
 def scrape() -> ScrapeResult:
     result = ScrapeResult(source=SOURCE_NAME, source_url=SOURCE_URL)
     window_start, window_end = data_window_range()
     today = datetime.now(PACIFIC)
-    backend = "ScraperAPI" if SCRAPERAPI_KEY else "Playwright"
     print(
-        f"[{SOURCE_NAME}] window {window_start.date()} – {window_end.date()} "
-        f"(backend: {backend})",
+        f"[{SOURCE_NAME}] window {window_start.date()} – {window_end.date()}",
         file=sys.stderr,
     )
 
-    if SCRAPERAPI_KEY:
-        downloaded = _gather_via_scraperapi(today)
-    else:
-        downloaded = _gather_via_playwright(today)
+    downloaded = _gather_via_playwright(today)
 
     if not downloaded:
         return result
