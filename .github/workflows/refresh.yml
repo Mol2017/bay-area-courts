@@ -2,8 +2,8 @@ name: Refresh court data
 
 on:
   schedule:
-    # Every Monday at 14:00 UTC (07:00 PT during PDT, 06:00 PT during PST).
-    - cron: "0 14 * * 1"
+    # Daily at 14:00 UTC (07:00 PT during PDT, 06:00 PT during PST).
+    - cron: "0 14 * * *"
   workflow_dispatch: {}
 
 permissions:
