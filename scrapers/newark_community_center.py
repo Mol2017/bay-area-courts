@@ -525,6 +525,30 @@ def _build_day_sessions(
 # ── orchestration ─────────────────────────────────────────────────────────
 
 
+_FNAME_DATE_RE = re.compile(r"newark_silliman_(\d{4}-\d{2}-\d{2})_")
+
+
+def _cleanup_stale_images(cutoff: datetime) -> None:
+    """Remove committed Newark posters whose scrape-date in the filename is
+    older than the current data window's Monday. Keeps the repo from
+    accumulating JPEGs forever as weeks roll over.
+    """
+    if not IMAGES_DIR.exists():
+        return
+    cutoff_date = cutoff.date()
+    for p in IMAGES_DIR.glob("newark_silliman_*.jpg"):
+        m = _FNAME_DATE_RE.search(p.name)
+        if not m:
+            continue
+        try:
+            scrape_date = datetime.strptime(m.group(1), "%Y-%m-%d").date()
+        except ValueError:
+            continue
+        if scrape_date < cutoff_date:
+            p.unlink()
+            print(f"[{SOURCE_NAME}] removed stale image {p.name}", file=sys.stderr)
+
+
 def scrape() -> ScrapeResult:
     result = ScrapeResult(source=SOURCE_NAME, source_url=SOURCE_URL)
     window_start, window_end = data_window_range()
@@ -533,6 +557,7 @@ def scrape() -> ScrapeResult:
         f"[{SOURCE_NAME}] window {window_start.date()} – {window_end.date()}",
         file=sys.stderr,
     )
+    _cleanup_stale_images(window_start)
 
     # Stage 1: fetch court-schedule items from the RSS mirror.
     rss_items = _fetch_rss_items()

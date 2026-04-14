@@ -50,7 +50,7 @@ jobs:
           # Stage data; the images dir may not exist if no Newark scrape ran.
           git add data/raw/*.json data/merged.json
           if [ -d data/raw/images ]; then
-            git add data/raw/images
+            git add -A data/raw/images
           fi
           if git diff --staged --quiet; then
             echo "No data changes."
