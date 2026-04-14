@@ -52,7 +52,7 @@ from base import (
 
 SOURCE_NAME = "newark_community_center"
 SOURCE_URL = "https://www.facebook.com/Newarkrec/"
-RSS_URL = "https://rss.app/feeds/4ob5vMivToevVCvG.xml"
+RSS_URL = "https://fetchrss.com/feed/1wCnAg581E3m1wCnARAEg1f0.rss"
 VENUE = "Silliman Center"
 ADDRESS = "6800 Mowry Ave, Newark, CA 94560"
 
@@ -66,13 +66,18 @@ COURT_TITLE_RE = re.compile(
 
 
 def _fetch_rss_items() -> list[dict]:
-    """Fetch the RSS mirror of the Newark Rec FB page and return items
-    whose title mentions "Court Availability" or "Court Schedule".
+    """Fetch the FetchRSS mirror of the Newark Rec FB page and return items
+    that look like weekly Silliman court-availability posts.
 
-    Each returned dict has keys: ``title``, ``image_url``, ``pub_date``.
-    The ``image_url`` is the signed FB CDN URL embedded in the ``<description>``
-    or ``<media:content>`` element — it works from any IP because the CDN
-    honours the signature, not the caller's IP.
+    For carousel posts the feed embeds *every* slide as an ``<img>`` tag
+    inside the item's ``<description>``, so we return a list of image
+    URLs per item rather than a single one. Older single-image posts
+    simply have a one-element list.
+
+    Each returned dict has keys: ``caption``, ``image_urls``, ``pub_date``.
+    ``caption`` is the post body text (used later for date-range parsing);
+    the generic FetchRSS titles for carousel posts ("Photos from …'s post")
+    don't carry that info.
     """
     print(f"[{SOURCE_NAME}] fetching RSS feed…", file=sys.stderr)
     req = urllib.request.Request(
@@ -86,29 +91,32 @@ def _fetch_rss_items() -> list[dict]:
     out: list[dict] = []
     for item in root.iter("item"):
         title = (item.findtext("title") or "").strip()
-        if not COURT_TITLE_RE.search(title):
-            continue
-        # Image URL: prefer <description> img src (has the signed CDN URL),
-        # fall back to <media:content> or <enclosure>.
         desc = item.findtext("description") or ""
-        img_match = re.search(r'<img[^>]+src="([^"]+)"', desc)
-        image_url = img_match.group(1) if img_match else None
-        if not image_url:
-            # Try media:content
-            for ns in (
-                "{http://search.yahoo.com/mrss/}",
-                "{http://purl.org/rss/1.0/modules/content/}",
-            ):
-                mc = item.find(f"{ns}content")
-                if mc is not None and mc.get("url"):
-                    image_url = mc.get("url")
-                    break
-        if not image_url:
-            enc = item.find("enclosure")
-            if enc is not None:
-                image_url = enc.get("url")
+        # Strip HTML tags to get the plain caption body for matching and
+        # downstream date-range parsing.
+        caption = re.sub(r"<[^>]+>", " ", desc)
+        caption = re.sub(r"\s+", " ", caption).strip()
+        # Match court-schedule posts on either the title or the caption —
+        # FetchRSS uses a generic "Photos from …'s post" title for
+        # carousel posts, so the real signal lives in the caption body.
+        if not (
+            COURT_TITLE_RE.search(title) or COURT_TITLE_RE.search(caption)
+        ):
+            continue
+        image_urls = [
+            m.replace("&amp;", "&")
+            for m in re.findall(r'<img[^>]+src="([^"]+)"', desc)
+        ]
+        if not image_urls:
+            continue
         pub_date = (item.findtext("pubDate") or "").strip()
-        out.append({"title": title, "image_url": image_url, "pub_date": pub_date})
+        out.append(
+            {
+                "caption": caption,
+                "image_urls": image_urls,
+                "pub_date": pub_date,
+            }
+        )
 
     print(f"[{SOURCE_NAME}] RSS: {len(out)} court-schedule items", file=sys.stderr)
     return out
@@ -565,29 +573,33 @@ def scrape() -> ScrapeResult:
         print(f"[{SOURCE_NAME}] no court-schedule items in RSS", file=sys.stderr)
         return result
 
-    # Stage 2: download each poster image and pair it with its caption.
+    # Stage 2: download every poster image (carousel posts contribute
+    # multiple slides) and pair each with its caption.
     downloaded: list[tuple[Path, dict]] = []
     for idx, item in enumerate(rss_items):
-        image_url = item.get("image_url")
-        if not image_url:
-            continue
-        cap_range = parse_caption_range(item.get("title", ""))
-        label_parts = [today.strftime("%Y-%m-%d"), f"post{idx + 1}"]
-        if cap_range:
-            label_parts.append(cap_range[0].strftime("%m-%d"))
-        label = "_".join(label_parts)
-        try:
-            path = _download_image(image_url, label)
-        except Exception as e:  # noqa: BLE001
-            print(f"[{SOURCE_NAME}] download failed: {e}", file=sys.stderr)
-            continue
-        # Build a post dict compatible with the OCR stage below.
-        post = {"captionText": item.get("title", ""), "feedSrc": image_url}
-        downloaded.append((path, post))
-        print(
-            f"[{SOURCE_NAME}] downloaded {path.relative_to(REPO_ROOT)}",
-            file=sys.stderr,
-        )
+        image_urls: list[str] = item.get("image_urls") or []
+        caption = item.get("caption", "")
+        cap_range = parse_caption_range(caption)
+        for slide_idx, image_url in enumerate(image_urls):
+            label_parts = [
+                today.strftime("%Y-%m-%d"),
+                f"post{idx + 1}",
+                f"slide{slide_idx + 1}",
+            ]
+            if cap_range:
+                label_parts.append(cap_range[0].strftime("%m-%d"))
+            label = "_".join(label_parts)
+            try:
+                path = _download_image(image_url, label)
+            except Exception as e:  # noqa: BLE001
+                print(f"[{SOURCE_NAME}] download failed: {e}", file=sys.stderr)
+                continue
+            post = {"captionText": caption, "feedSrc": image_url}
+            downloaded.append((path, post))
+            print(
+                f"[{SOURCE_NAME}] downloaded {path.relative_to(REPO_ROOT)}",
+                file=sys.stderr,
+            )
 
     if not downloaded:
         return result
