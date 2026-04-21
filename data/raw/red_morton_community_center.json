@@ -2,7 +2,7 @@
   "schema_version": 1,
   "source": "red_morton_community_center",
   "source_url": "https://www.redwoodcity.org/departments/parks-recreation-and-community-services/sports/open-gym",
-  "scraped_at": "2026-04-20T08:20:46-07:00",
+  "scraped_at": "2026-04-21T08:17:09-07:00",
   "sessions": [
     {
       "venue": "Red Morton Community Center",
@@ -52,46 +52,46 @@
     },
     {
       "venue": "Red Morton Community Center",
-      "start": "2026-04-20T20:00-07:00",
-      "end": "2026-04-20T20:30-07:00",
+      "start": "2026-04-20T17:30-07:00",
+      "end": "2026-04-20T20:00-07:00",
       "activity": "Drop-In Basketball (Half Gym)",
       "address": "Red Morton Community Center, 1120 Roosevelt Ave Redwood City, California 94061",
       "lat": null,
       "lon": null,
       "cost": "$5 adult / $1 youth/teen/senior",
-      "notes": "Half gym: only Court 1 is open. 8:00 PM\u20138:30 PM. Drop-in; subject to change for rentals or programs.",
+      "notes": "Half gym: only Court 1 is open. 5:30 PM\u20138:00 PM. Drop-in; subject to change for rentals or programs.",
       "source_event_url": "https://www.redwoodcity.org/Home/Components/Calendar/Event/94639/536",
       "courts": [
         {
           "name": "Court 1",
           "windows": [
-            "8:00 PM\u20138:30 PM"
+            "5:30 PM\u20138:00 PM"
           ]
         }
       ]
     },
     {
       "venue": "Red Morton Community Center",
-      "start": "2026-04-20T20:30-07:00",
+      "start": "2026-04-20T20:00-07:00",
       "end": "2026-04-20T21:45-07:00",
       "activity": "Drop-In Basketball (Full Gym)",
       "address": "Red Morton Community Center, 1120 Roosevelt Ave Redwood City, California 94061",
       "lat": null,
       "lon": null,
       "cost": "$5 adult / $1 youth/teen/senior",
-      "notes": "Full gym: both Court 1 and Court 2 are open. 8:30 PM\u20139:45 PM. Drop-in; subject to change for rentals or programs.",
+      "notes": "Full gym: both Court 1 and Court 2 are open. 8:00 PM\u20139:45 PM. Drop-in; subject to change for rentals or programs.",
       "source_event_url": "https://www.redwoodcity.org/Home/Components/Calendar/Event/94635/536",
       "courts": [
         {
           "name": "Court 1",
           "windows": [
-            "8:30 PM\u20139:45 PM"
+            "8:00 PM\u20139:45 PM"
           ]
         },
         {
           "name": "Court 2",
           "windows": [
-            "8:30 PM\u20139:45 PM"
+            "8:00 PM\u20139:45 PM"
           ]
         }
       ]

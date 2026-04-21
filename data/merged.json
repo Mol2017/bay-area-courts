@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-20T08:20:46-07:00",
+  "generated_at": "2026-04-21T08:17:10-07:00",
   "window_start": "2026-04-20",
   "window_end": "2026-05-04",
   "weeks": 2,
@@ -67,42 +67,21 @@
       "source": "red_morton_community_center"
     },
     {
-      "venue": "Arrillaga Family Gymnasium",
-      "start": "2026-04-20T13:00-07:00",
-      "end": "2026-04-20T19:00-07:00",
-      "activity": "Court Rental",
-      "address": "600 Alma St, Menlo Park, CA 94025",
-      "lat": null,
-      "lon": null,
-      "cost": "Free drop-in (or $88.00/hr to reserve)",
-      "notes": "Combined Court 2 availability at Arrillaga Family Gymnasium. Court 2: 1:00 PM\u20137:00 PM. CatchCorner lists these as $88/hr rentals in 2-hour blocks, but if no one books a slot the court is open as free drop-in during the same window.",
-      "source_event_url": "https://www.catchcorner.com/facility-page/embedded/rental/arrillaga-family-gymnasium-city-of-menlo-park/Basketball",
-      "courts": [
-        {
-          "name": "Court 2",
-          "windows": [
-            "1:00 PM\u20137:00 PM"
-          ]
-        }
-      ],
-      "source": "arrillaga_family_gymnasium"
-    },
-    {
       "venue": "Red Morton Community Center",
-      "start": "2026-04-20T20:00-07:00",
-      "end": "2026-04-20T20:30-07:00",
+      "start": "2026-04-20T17:30-07:00",
+      "end": "2026-04-20T20:00-07:00",
       "activity": "Drop-In Basketball (Half Gym)",
       "address": "Red Morton Community Center, 1120 Roosevelt Ave Redwood City, California 94061",
       "lat": null,
       "lon": null,
       "cost": "$5 adult / $1 youth/teen/senior",
-      "notes": "Half gym: only Court 1 is open. 8:00 PM\u20138:30 PM. Drop-in; subject to change for rentals or programs.",
+      "notes": "Half gym: only Court 1 is open. 5:30 PM\u20138:00 PM. Drop-in; subject to change for rentals or programs.",
       "source_event_url": "https://www.redwoodcity.org/Home/Components/Calendar/Event/94639/536",
       "courts": [
         {
           "name": "Court 1",
           "windows": [
-            "8:00 PM\u20138:30 PM"
+            "5:30 PM\u20138:00 PM"
           ]
         }
       ],
@@ -110,59 +89,30 @@
     },
     {
       "venue": "Red Morton Community Center",
-      "start": "2026-04-20T20:30-07:00",
+      "start": "2026-04-20T20:00-07:00",
       "end": "2026-04-20T21:45-07:00",
       "activity": "Drop-In Basketball (Full Gym)",
       "address": "Red Morton Community Center, 1120 Roosevelt Ave Redwood City, California 94061",
       "lat": null,
       "lon": null,
       "cost": "$5 adult / $1 youth/teen/senior",
-      "notes": "Full gym: both Court 1 and Court 2 are open. 8:30 PM\u20139:45 PM. Drop-in; subject to change for rentals or programs.",
+      "notes": "Full gym: both Court 1 and Court 2 are open. 8:00 PM\u20139:45 PM. Drop-in; subject to change for rentals or programs.",
       "source_event_url": "https://www.redwoodcity.org/Home/Components/Calendar/Event/94635/536",
       "courts": [
         {
           "name": "Court 1",
           "windows": [
-            "8:30 PM\u20139:45 PM"
+            "8:00 PM\u20139:45 PM"
           ]
         },
         {
           "name": "Court 2",
           "windows": [
-            "8:30 PM\u20139:45 PM"
+            "8:00 PM\u20139:45 PM"
           ]
         }
       ],
       "source": "red_morton_community_center"
-    },
-    {
-      "venue": "Arrillaga Family Gymnasium",
-      "start": "2026-04-21T08:30-07:00",
-      "end": "2026-04-21T12:00-07:00",
-      "activity": "Court Rental",
-      "address": "600 Alma St, Menlo Park, CA 94025",
-      "lat": null,
-      "lon": null,
-      "cost": "Free drop-in (or $88.00/hr to reserve)",
-      "notes": "Combined Court 1 + Court 2 availability at Arrillaga Family Gymnasium. Court 1: 9:30 AM\u201312:00 PM, 2:00 PM\u20134:00 PM. Court 2: 8:30 AM\u201312:00 PM, 2:00 PM\u20134:00 PM. CatchCorner lists these as $88/hr rentals in 2-hour blocks, but if no one books a slot the court is open as free drop-in during the same window.",
-      "source_event_url": "https://www.catchcorner.com/facility-page/embedded/rental/arrillaga-family-gymnasium-city-of-menlo-park/Basketball",
-      "courts": [
-        {
-          "name": "Court 1",
-          "windows": [
-            "9:30 AM\u201312:00 PM",
-            "2:00 PM\u20134:00 PM"
-          ]
-        },
-        {
-          "name": "Court 2",
-          "windows": [
-            "8:30 AM\u201312:00 PM",
-            "2:00 PM\u20134:00 PM"
-          ]
-        }
-      ],
-      "source": "arrillaga_family_gymnasium"
     },
     {
       "venue": "Red Morton Community Center",
@@ -214,20 +164,18 @@
       "lat": null,
       "lon": null,
       "cost": "Free drop-in (or $88.00/hr to reserve)",
-      "notes": "Combined Court 1 + Court 2 availability at Arrillaga Family Gymnasium. Court 1: 9:30 AM\u201312:00 PM, 2:00 PM\u20134:00 PM. Court 2: 8:30 AM\u201312:00 PM, 2:00 PM\u20134:00 PM. CatchCorner lists these as $88/hr rentals in 2-hour blocks, but if no one books a slot the court is open as free drop-in during the same window.",
+      "notes": "Combined Court 1 + Court 2 availability at Arrillaga Family Gymnasium. Court 1: 2:00 PM\u20134:00 PM. Court 2: 2:00 PM\u20134:00 PM. CatchCorner lists these as $88/hr rentals in 2-hour blocks, but if no one books a slot the court is open as free drop-in during the same window.",
       "source_event_url": "https://www.catchcorner.com/facility-page/embedded/rental/arrillaga-family-gymnasium-city-of-menlo-park/Basketball",
       "courts": [
         {
           "name": "Court 1",
           "windows": [
-            "9:30 AM\u201312:00 PM",
             "2:00 PM\u20134:00 PM"
           ]
         },
         {
           "name": "Court 2",
           "windows": [
-            "8:30 AM\u201312:00 PM",
             "2:00 PM\u20134:00 PM"
           ]
         }
