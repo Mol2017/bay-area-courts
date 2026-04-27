@@ -1,429 +1,35 @@
 {
-  "generated_at": "2026-04-26T07:46:56-07:00",
-  "window_start": "2026-04-20",
-  "window_end": "2026-05-04",
+  "generated_at": "2026-04-27T08:53:38-07:00",
+  "window_start": "2026-04-27",
+  "window_end": "2026-05-11",
   "weeks": 2,
   "sessions": [
     {
-      "venue": "Red Morton Community Center",
-      "start": "2026-04-20T10:00-07:00",
-      "end": "2026-04-20T12:00-07:00",
-      "activity": "Drop-In Basketball (Half Gym)",
-      "address": "Red Morton Community Center, 1120 Roosevelt Ave Redwood City, California 94061",
+      "venue": "Silliman Center",
+      "start": "2026-04-27T06:00-07:00",
+      "end": "2026-04-27T17:00-07:00",
+      "activity": "Drop-In Basketball",
+      "address": "6800 Mowry Ave, Newark, CA 94560",
       "lat": null,
       "lon": null,
-      "cost": "$5 adult / $1 youth/teen/senior",
-      "notes": "Half gym: only Court 1 is open. 10:00 AM\u201312:00 PM. Drop-in; subject to change for rentals or programs.",
-      "source_event_url": "https://www.redwoodcity.org/Home/Components/Calendar/Event/94639/536",
+      "cost": "$14 per person (drop-in)",
+      "notes": "Combined Court 1 + Court 2 availability at Silliman Center. Court 1: 6:00 AM\u20135:00 PM. Court 2: 6:00 AM\u20133:30 PM. Scraped from weekly Newark Rec Facebook poster (EasyOCR).",
+      "source_event_url": "https://www.facebook.com/Newarkrec/",
       "courts": [
         {
           "name": "Court 1",
           "windows": [
-            "10:00 AM\u201312:00 PM"
-          ]
-        }
-      ],
-      "source": "red_morton_community_center"
-    },
-    {
-      "venue": "Peninsula Community Center",
-      "start": "2026-04-20T11:00-07:00",
-      "end": "2026-04-20T14:00-07:00",
-      "activity": "Open Gym",
-      "address": "3623 Jefferson Avenue, Redwood City, CA 94062",
-      "lat": null,
-      "lon": null,
-      "cost": "$55 per person (drop-in)",
-      "notes": "Room: Center Gym",
-      "source_event_url": "https://clients.mindbodyonline.com/classic/mainclass?studioid=782582&tabID=109",
-      "courts": null,
-      "source": "peninsula_community_center"
-    },
-    {
-      "venue": "Red Morton Community Center",
-      "start": "2026-04-20T12:00-07:00",
-      "end": "2026-04-20T14:30-07:00",
-      "activity": "Drop-In Basketball (Full Gym)",
-      "address": "Red Morton Community Center, 1120 Roosevelt Ave Redwood City, California 94061",
-      "lat": null,
-      "lon": null,
-      "cost": "$5 adult / $1 youth/teen/senior",
-      "notes": "Full gym: both Court 1 and Court 2 are open. 12:00 PM\u20132:30 PM. Drop-in; subject to change for rentals or programs.",
-      "source_event_url": "https://www.redwoodcity.org/Home/Components/Calendar/Event/94635/536",
-      "courts": [
-        {
-          "name": "Court 1",
-          "windows": [
-            "12:00 PM\u20132:30 PM"
+            "6:00 AM\u20135:00 PM"
           ]
         },
         {
           "name": "Court 2",
           "windows": [
-            "12:00 PM\u20132:30 PM"
+            "6:00 AM\u20133:30 PM"
           ]
         }
       ],
-      "source": "red_morton_community_center"
-    },
-    {
-      "venue": "Red Morton Community Center",
-      "start": "2026-04-20T17:30-07:00",
-      "end": "2026-04-20T20:00-07:00",
-      "activity": "Drop-In Basketball (Half Gym)",
-      "address": "Red Morton Community Center, 1120 Roosevelt Ave Redwood City, California 94061",
-      "lat": null,
-      "lon": null,
-      "cost": "$5 adult / $1 youth/teen/senior",
-      "notes": "Half gym: only Court 1 is open. 5:30 PM\u20138:00 PM. Drop-in; subject to change for rentals or programs.",
-      "source_event_url": "https://www.redwoodcity.org/Home/Components/Calendar/Event/94639/536",
-      "courts": [
-        {
-          "name": "Court 1",
-          "windows": [
-            "5:30 PM\u20138:00 PM"
-          ]
-        }
-      ],
-      "source": "red_morton_community_center"
-    },
-    {
-      "venue": "Red Morton Community Center",
-      "start": "2026-04-20T20:00-07:00",
-      "end": "2026-04-20T21:45-07:00",
-      "activity": "Drop-In Basketball (Full Gym)",
-      "address": "Red Morton Community Center, 1120 Roosevelt Ave Redwood City, California 94061",
-      "lat": null,
-      "lon": null,
-      "cost": "$5 adult / $1 youth/teen/senior",
-      "notes": "Full gym: both Court 1 and Court 2 are open. 8:00 PM\u20139:45 PM. Drop-in; subject to change for rentals or programs.",
-      "source_event_url": "https://www.redwoodcity.org/Home/Components/Calendar/Event/94635/536",
-      "courts": [
-        {
-          "name": "Court 1",
-          "windows": [
-            "8:00 PM\u20139:45 PM"
-          ]
-        },
-        {
-          "name": "Court 2",
-          "windows": [
-            "8:00 PM\u20139:45 PM"
-          ]
-        }
-      ],
-      "source": "red_morton_community_center"
-    },
-    {
-      "venue": "Red Morton Community Center",
-      "start": "2026-04-21T10:00-07:00",
-      "end": "2026-04-21T16:00-07:00",
-      "activity": "Drop-In Basketball (Full Gym)",
-      "address": "Red Morton Community Center, 1120 Roosevelt Ave Redwood City, California 94061",
-      "lat": null,
-      "lon": null,
-      "cost": "$5 adult / $1 youth/teen/senior",
-      "notes": "Full gym: both Court 1 and Court 2 are open. 10:00 AM\u20134:00 PM. Drop-in; subject to change for rentals or programs.",
-      "source_event_url": "https://www.redwoodcity.org/Home/Components/Calendar/Event/94635/536",
-      "courts": [
-        {
-          "name": "Court 1",
-          "windows": [
-            "10:00 AM\u20134:00 PM"
-          ]
-        },
-        {
-          "name": "Court 2",
-          "windows": [
-            "10:00 AM\u20134:00 PM"
-          ]
-        }
-      ],
-      "source": "red_morton_community_center"
-    },
-    {
-      "venue": "Peninsula Community Center",
-      "start": "2026-04-21T11:00-07:00",
-      "end": "2026-04-21T15:00-07:00",
-      "activity": "Open Gym",
-      "address": "3623 Jefferson Avenue, Redwood City, CA 94062",
-      "lat": null,
-      "lon": null,
-      "cost": "$55 per person (drop-in)",
-      "notes": "Room: Center Gym",
-      "source_event_url": "https://clients.mindbodyonline.com/classic/mainclass?studioid=782582&tabID=109",
-      "courts": null,
-      "source": "peninsula_community_center"
-    },
-    {
-      "venue": "Peninsula Community Center",
-      "start": "2026-04-21T18:00-07:00",
-      "end": "2026-04-21T20:00-07:00",
-      "activity": "Open Gym",
-      "address": "3623 Jefferson Avenue, Redwood City, CA 94062",
-      "lat": null,
-      "lon": null,
-      "cost": "$55 per person (drop-in)",
-      "notes": "Room: Center Gym",
-      "source_event_url": "https://clients.mindbodyonline.com/classic/mainclass?studioid=782582&tabID=109",
-      "courts": null,
-      "source": "peninsula_community_center"
-    },
-    {
-      "venue": "Red Morton Community Center",
-      "start": "2026-04-22T10:00-07:00",
-      "end": "2026-04-22T14:30-07:00",
-      "activity": "Drop-In Basketball (Half Gym)",
-      "address": "Red Morton Community Center, 1120 Roosevelt Ave Redwood City, California 94061",
-      "lat": null,
-      "lon": null,
-      "cost": "$5 adult / $1 youth/teen/senior",
-      "notes": "Half gym: only Court 1 is open. 10:00 AM\u20132:30 PM. Drop-in; subject to change for rentals or programs.",
-      "source_event_url": "https://www.redwoodcity.org/Home/Components/Calendar/Event/94639/536",
-      "courts": [
-        {
-          "name": "Court 1",
-          "windows": [
-            "10:00 AM\u20132:30 PM"
-          ]
-        }
-      ],
-      "source": "red_morton_community_center"
-    },
-    {
-      "venue": "Peninsula Community Center",
-      "start": "2026-04-22T11:00-07:00",
-      "end": "2026-04-22T14:00-07:00",
-      "activity": "Open Gym",
-      "address": "3623 Jefferson Avenue, Redwood City, CA 94062",
-      "lat": null,
-      "lon": null,
-      "cost": "$55 per person (drop-in)",
-      "notes": "Room: Center Gym",
-      "source_event_url": "https://clients.mindbodyonline.com/classic/mainclass?studioid=782582&tabID=109",
-      "courts": null,
-      "source": "peninsula_community_center"
-    },
-    {
-      "venue": "Red Morton Community Center",
-      "start": "2026-04-23T10:00-07:00",
-      "end": "2026-04-23T14:30-07:00",
-      "activity": "Drop-In Basketball (Half Gym)",
-      "address": "Red Morton Community Center, 1120 Roosevelt Ave Redwood City, California 94061",
-      "lat": null,
-      "lon": null,
-      "cost": "$5 adult / $1 youth/teen/senior",
-      "notes": "Half gym: only Court 1 is open. 10:00 AM\u20132:30 PM. Drop-in; subject to change for rentals or programs.",
-      "source_event_url": "https://www.redwoodcity.org/Home/Components/Calendar/Event/94639/536",
-      "courts": [
-        {
-          "name": "Court 1",
-          "windows": [
-            "10:00 AM\u20132:30 PM"
-          ]
-        }
-      ],
-      "source": "red_morton_community_center"
-    },
-    {
-      "venue": "Peninsula Community Center",
-      "start": "2026-04-23T11:00-07:00",
-      "end": "2026-04-23T15:00-07:00",
-      "activity": "Open Gym",
-      "address": "3623 Jefferson Avenue, Redwood City, CA 94062",
-      "lat": null,
-      "lon": null,
-      "cost": "$55 per person (drop-in)",
-      "notes": "Room: Center Gym",
-      "source_event_url": "https://clients.mindbodyonline.com/classic/mainclass?studioid=782582&tabID=109",
-      "courts": null,
-      "source": "peninsula_community_center"
-    },
-    {
-      "venue": "Red Morton Community Center",
-      "start": "2026-04-23T14:30-07:00",
-      "end": "2026-04-23T16:00-07:00",
-      "activity": "Drop-In Basketball (Full Gym)",
-      "address": "Red Morton Community Center, 1120 Roosevelt Ave Redwood City, California 94061",
-      "lat": null,
-      "lon": null,
-      "cost": "$5 adult / $1 youth/teen/senior",
-      "notes": "Full gym: both Court 1 and Court 2 are open. 2:30 PM\u20134:00 PM. Drop-in; subject to change for rentals or programs.",
-      "source_event_url": "https://www.redwoodcity.org/Home/Components/Calendar/Event/94635/536",
-      "courts": [
-        {
-          "name": "Court 1",
-          "windows": [
-            "2:30 PM\u20134:00 PM"
-          ]
-        },
-        {
-          "name": "Court 2",
-          "windows": [
-            "2:30 PM\u20134:00 PM"
-          ]
-        }
-      ],
-      "source": "red_morton_community_center"
-    },
-    {
-      "venue": "Peninsula Community Center",
-      "start": "2026-04-23T18:00-07:00",
-      "end": "2026-04-23T20:00-07:00",
-      "activity": "Adult Basketball Pick-Up Game",
-      "address": "3623 Jefferson Avenue, Redwood City, CA 94062",
-      "lat": null,
-      "lon": null,
-      "cost": "$55 per person (drop-in)",
-      "notes": "Room: Center Gym",
-      "source_event_url": "https://clients.mindbodyonline.com/classic/mainclass?studioid=782582&tabID=109",
-      "courts": null,
-      "source": "peninsula_community_center"
-    },
-    {
-      "venue": "Red Morton Community Center",
-      "start": "2026-04-24T10:00-07:00",
-      "end": "2026-04-24T21:45-07:00",
-      "activity": "Drop-In Basketball (Full Gym)",
-      "address": "Red Morton Community Center, 1120 Roosevelt Ave Redwood City, California 94061",
-      "lat": null,
-      "lon": null,
-      "cost": "$5 adult / $1 youth/teen/senior",
-      "notes": "Full gym: both Court 1 and Court 2 are open. 10:00 AM\u20139:45 PM. Drop-in; subject to change for rentals or programs.",
-      "source_event_url": "https://www.redwoodcity.org/Home/Components/Calendar/Event/94635/536",
-      "courts": [
-        {
-          "name": "Court 1",
-          "windows": [
-            "10:00 AM\u20139:45 PM"
-          ]
-        },
-        {
-          "name": "Court 2",
-          "windows": [
-            "10:00 AM\u20139:45 PM"
-          ]
-        }
-      ],
-      "source": "red_morton_community_center"
-    },
-    {
-      "venue": "Peninsula Community Center",
-      "start": "2026-04-24T11:00-07:00",
-      "end": "2026-04-24T14:00-07:00",
-      "activity": "Open Gym",
-      "address": "3623 Jefferson Avenue, Redwood City, CA 94062",
-      "lat": null,
-      "lon": null,
-      "cost": "$55 per person (drop-in)",
-      "notes": "Room: Center Gym",
-      "source_event_url": "https://clients.mindbodyonline.com/classic/mainclass?studioid=782582&tabID=109",
-      "courts": null,
-      "source": "peninsula_community_center"
-    },
-    {
-      "venue": "Peninsula Community Center",
-      "start": "2026-04-24T17:00-07:00",
-      "end": "2026-04-24T20:00-07:00",
-      "activity": "Open Gym",
-      "address": "3623 Jefferson Avenue, Redwood City, CA 94062",
-      "lat": null,
-      "lon": null,
-      "cost": "$55 per person (drop-in)",
-      "notes": "Room: Center Gym",
-      "source_event_url": "https://clients.mindbodyonline.com/classic/mainclass?studioid=782582&tabID=109",
-      "courts": null,
-      "source": "peninsula_community_center"
-    },
-    {
-      "venue": "Red Morton Community Center",
-      "start": "2026-04-25T08:00-07:00",
-      "end": "2026-04-25T14:45-07:00",
-      "activity": "Drop-In Basketball (Half Gym)",
-      "address": "Red Morton Community Center, 1120 Roosevelt Ave Redwood City, California 94061",
-      "lat": null,
-      "lon": null,
-      "cost": "$5 adult / $1 youth/teen/senior",
-      "notes": "Half gym: only Court 1 is open. 8:00 AM\u20132:45 PM. Drop-in; subject to change for rentals or programs.",
-      "source_event_url": "https://www.redwoodcity.org/Home/Components/Calendar/Event/94639/536",
-      "courts": [
-        {
-          "name": "Court 1",
-          "windows": [
-            "8:00 AM\u20132:45 PM"
-          ]
-        }
-      ],
-      "source": "red_morton_community_center"
-    },
-    {
-      "venue": "Peninsula Community Center",
-      "start": "2026-04-25T10:00-07:00",
-      "end": "2026-04-25T12:00-07:00",
-      "activity": "Adult Basketball Pick-Up Game",
-      "address": "3623 Jefferson Avenue, Redwood City, CA 94062",
-      "lat": null,
-      "lon": null,
-      "cost": "$55 per person (drop-in)",
-      "notes": "Room: Center Gym",
-      "source_event_url": "https://clients.mindbodyonline.com/classic/mainclass?studioid=782582&tabID=109",
-      "courts": null,
-      "source": "peninsula_community_center"
-    },
-    {
-      "venue": "Peninsula Community Center",
-      "start": "2026-04-25T12:00-07:00",
-      "end": "2026-04-25T20:00-07:00",
-      "activity": "Open Gym",
-      "address": "3623 Jefferson Avenue, Redwood City, CA 94062",
-      "lat": null,
-      "lon": null,
-      "cost": "$55 per person (drop-in)",
-      "notes": "Room: Center Gym",
-      "source_event_url": "https://clients.mindbodyonline.com/classic/mainclass?studioid=782582&tabID=109",
-      "courts": null,
-      "source": "peninsula_community_center"
-    },
-    {
-      "venue": "Red Morton Community Center",
-      "start": "2026-04-25T14:45-07:00",
-      "end": "2026-04-25T16:45-07:00",
-      "activity": "Drop-In Basketball (Full Gym)",
-      "address": "Red Morton Community Center, 1120 Roosevelt Ave Redwood City, California 94061",
-      "lat": null,
-      "lon": null,
-      "cost": "$5 adult / $1 youth/teen/senior",
-      "notes": "Full gym: both Court 1 and Court 2 are open. 2:45 PM\u20134:45 PM. Drop-in; subject to change for rentals or programs.",
-      "source_event_url": "https://www.redwoodcity.org/Home/Components/Calendar/Event/94635/536",
-      "courts": [
-        {
-          "name": "Court 1",
-          "windows": [
-            "2:45 PM\u20134:45 PM"
-          ]
-        },
-        {
-          "name": "Court 2",
-          "windows": [
-            "2:45 PM\u20134:45 PM"
-          ]
-        }
-      ],
-      "source": "red_morton_community_center"
-    },
-    {
-      "venue": "Peninsula Community Center",
-      "start": "2026-04-26T12:00-07:00",
-      "end": "2026-04-26T17:00-07:00",
-      "activity": "Open Gym",
-      "address": "3623 Jefferson Avenue, Redwood City, CA 94062",
-      "lat": null,
-      "lon": null,
-      "cost": "$55 per person (drop-in)",
-      "notes": "Room: Center Gym",
-      "source_event_url": "https://clients.mindbodyonline.com/classic/mainclass?studioid=782582&tabID=109",
-      "courts": null,
-      "source": "peninsula_community_center"
+      "source": "newark_community_center"
     },
     {
       "venue": "Red Morton Community Center",
@@ -557,6 +163,34 @@
       "source": "red_morton_community_center"
     },
     {
+      "venue": "Silliman Center",
+      "start": "2026-04-28T06:00-07:00",
+      "end": "2026-04-28T16:00-07:00",
+      "activity": "Drop-In Basketball",
+      "address": "6800 Mowry Ave, Newark, CA 94560",
+      "lat": null,
+      "lon": null,
+      "cost": "$14 per person (drop-in)",
+      "notes": "Combined Court 1 + Court 2 availability at Silliman Center. Court 1: 6:00 AM\u20134:00 PM. Court 2: 6:00 AM\u20133:30 PM, 5:30 PM\u20136:00 PM. Scraped from weekly Newark Rec Facebook poster (EasyOCR).",
+      "source_event_url": "https://www.facebook.com/Newarkrec/",
+      "courts": [
+        {
+          "name": "Court 1",
+          "windows": [
+            "6:00 AM\u20134:00 PM"
+          ]
+        },
+        {
+          "name": "Court 2",
+          "windows": [
+            "6:00 AM\u20133:30 PM",
+            "5:30 PM\u20136:00 PM"
+          ]
+        }
+      ],
+      "source": "newark_community_center"
+    },
+    {
       "venue": "Arrillaga Family Gymnasium",
       "start": "2026-04-28T08:30-07:00",
       "end": "2026-04-28T12:00-07:00",
@@ -656,6 +290,34 @@
       "source": "arrillaga_family_gymnasium"
     },
     {
+      "venue": "Silliman Center",
+      "start": "2026-04-28T17:30-07:00",
+      "end": "2026-04-28T18:00-07:00",
+      "activity": "Drop-In Basketball",
+      "address": "6800 Mowry Ave, Newark, CA 94560",
+      "lat": null,
+      "lon": null,
+      "cost": "$14 per person (drop-in)",
+      "notes": "Combined Court 1 + Court 2 availability at Silliman Center. Court 1: 6:00 AM\u20134:00 PM. Court 2: 6:00 AM\u20133:30 PM, 5:30 PM\u20136:00 PM. Scraped from weekly Newark Rec Facebook poster (EasyOCR).",
+      "source_event_url": "https://www.facebook.com/Newarkrec/",
+      "courts": [
+        {
+          "name": "Court 1",
+          "windows": [
+            "6:00 AM\u20134:00 PM"
+          ]
+        },
+        {
+          "name": "Court 2",
+          "windows": [
+            "6:00 AM\u20133:30 PM",
+            "5:30 PM\u20136:00 PM"
+          ]
+        }
+      ],
+      "source": "newark_community_center"
+    },
+    {
       "venue": "Peninsula Community Center",
       "start": "2026-04-28T18:00-07:00",
       "end": "2026-04-28T20:00-07:00",
@@ -668,6 +330,33 @@
       "source_event_url": "https://clients.mindbodyonline.com/classic/mainclass?studioid=782582&tabID=109",
       "courts": null,
       "source": "peninsula_community_center"
+    },
+    {
+      "venue": "Silliman Center",
+      "start": "2026-04-29T06:00-07:00",
+      "end": "2026-04-29T19:00-07:00",
+      "activity": "Drop-In Basketball",
+      "address": "6800 Mowry Ave, Newark, CA 94560",
+      "lat": null,
+      "lon": null,
+      "cost": "$14 per person (drop-in)",
+      "notes": "Combined Court 1 + Court 2 availability at Silliman Center. Court 1: 6:00 AM\u20134:00 PM. Court 2: 6:00 AM\u20137:00 PM. Scraped from weekly Newark Rec Facebook poster (EasyOCR).",
+      "source_event_url": "https://www.facebook.com/Newarkrec/",
+      "courts": [
+        {
+          "name": "Court 1",
+          "windows": [
+            "6:00 AM\u20134:00 PM"
+          ]
+        },
+        {
+          "name": "Court 2",
+          "windows": [
+            "6:00 AM\u20137:00 PM"
+          ]
+        }
+      ],
+      "source": "newark_community_center"
     },
     {
       "venue": "Arrillaga Family Gymnasium",
@@ -757,6 +446,33 @@
         }
       ],
       "source": "arrillaga_family_gymnasium"
+    },
+    {
+      "venue": "Silliman Center",
+      "start": "2026-04-30T06:00-07:00",
+      "end": "2026-04-30T17:00-07:00",
+      "activity": "Drop-In Basketball",
+      "address": "6800 Mowry Ave, Newark, CA 94560",
+      "lat": null,
+      "lon": null,
+      "cost": "$14 per person (drop-in)",
+      "notes": "Combined Court 1 + Court 2 availability at Silliman Center. Court 1: 6:00 AM\u20133:30 PM. Court 2: 6:00 AM\u20135:00 PM. Scraped from weekly Newark Rec Facebook poster (EasyOCR).",
+      "source_event_url": "https://www.facebook.com/Newarkrec/",
+      "courts": [
+        {
+          "name": "Court 1",
+          "windows": [
+            "6:00 AM\u20133:30 PM"
+          ]
+        },
+        {
+          "name": "Court 2",
+          "windows": [
+            "6:00 AM\u20135:00 PM"
+          ]
+        }
+      ],
+      "source": "newark_community_center"
     },
     {
       "venue": "Arrillaga Family Gymnasium",
@@ -893,6 +609,34 @@
       "source": "peninsula_community_center"
     },
     {
+      "venue": "Silliman Center",
+      "start": "2026-05-01T06:00-07:00",
+      "end": "2026-05-01T17:00-07:00",
+      "activity": "Drop-In Basketball",
+      "address": "6800 Mowry Ave, Newark, CA 94560",
+      "lat": null,
+      "lon": null,
+      "cost": "$14 per person (drop-in)",
+      "notes": "Combined Court 1 + Court 2 availability at Silliman Center. Court 1: 6:00 AM\u20134:00 PM, 5:45 PM\u20139:00 PM. Court 2: 6:00 AM\u20135:00 PM. Scraped from weekly Newark Rec Facebook poster (EasyOCR).",
+      "source_event_url": "https://www.facebook.com/Newarkrec/",
+      "courts": [
+        {
+          "name": "Court 1",
+          "windows": [
+            "6:00 AM\u20134:00 PM",
+            "5:45 PM\u20139:00 PM"
+          ]
+        },
+        {
+          "name": "Court 2",
+          "windows": [
+            "6:00 AM\u20135:00 PM"
+          ]
+        }
+      ],
+      "source": "newark_community_center"
+    },
+    {
       "venue": "Arrillaga Family Gymnasium",
       "start": "2026-05-01T07:30-07:00",
       "end": "2026-05-01T12:00-07:00",
@@ -975,6 +719,62 @@
       "source": "peninsula_community_center"
     },
     {
+      "venue": "Silliman Center",
+      "start": "2026-05-01T17:45-07:00",
+      "end": "2026-05-01T21:00-07:00",
+      "activity": "Drop-In Basketball",
+      "address": "6800 Mowry Ave, Newark, CA 94560",
+      "lat": null,
+      "lon": null,
+      "cost": "$14 per person (drop-in)",
+      "notes": "Combined Court 1 + Court 2 availability at Silliman Center. Court 1: 6:00 AM\u20134:00 PM, 5:45 PM\u20139:00 PM. Court 2: 6:00 AM\u20135:00 PM. Scraped from weekly Newark Rec Facebook poster (EasyOCR).",
+      "source_event_url": "https://www.facebook.com/Newarkrec/",
+      "courts": [
+        {
+          "name": "Court 1",
+          "windows": [
+            "6:00 AM\u20134:00 PM",
+            "5:45 PM\u20139:00 PM"
+          ]
+        },
+        {
+          "name": "Court 2",
+          "windows": [
+            "6:00 AM\u20135:00 PM"
+          ]
+        }
+      ],
+      "source": "newark_community_center"
+    },
+    {
+      "venue": "Silliman Center",
+      "start": "2026-05-02T07:00-07:00",
+      "end": "2026-05-02T14:00-07:00",
+      "activity": "Drop-In Basketball",
+      "address": "6800 Mowry Ave, Newark, CA 94560",
+      "lat": null,
+      "lon": null,
+      "cost": "$14 per person (drop-in)",
+      "notes": "Combined Court 1 + Court 2 availability at Silliman Center. Court 1: 7:00 AM\u20131:00 PM, 3:00 PM\u20134:00 PM. Court 2: 7:00 AM\u20132:00 PM. Scraped from weekly Newark Rec Facebook poster (EasyOCR).",
+      "source_event_url": "https://www.facebook.com/Newarkrec/",
+      "courts": [
+        {
+          "name": "Court 1",
+          "windows": [
+            "7:00 AM\u20131:00 PM",
+            "3:00 PM\u20134:00 PM"
+          ]
+        },
+        {
+          "name": "Court 2",
+          "windows": [
+            "7:00 AM\u20132:00 PM"
+          ]
+        }
+      ],
+      "source": "newark_community_center"
+    },
+    {
       "venue": "Arrillaga Family Gymnasium",
       "start": "2026-05-02T07:30-07:00",
       "end": "2026-05-02T17:00-07:00",
@@ -1030,6 +830,34 @@
       "source_event_url": "https://clients.mindbodyonline.com/classic/mainclass?studioid=782582&tabID=109",
       "courts": null,
       "source": "peninsula_community_center"
+    },
+    {
+      "venue": "Silliman Center",
+      "start": "2026-05-02T15:00-07:00",
+      "end": "2026-05-02T16:00-07:00",
+      "activity": "Drop-In Basketball",
+      "address": "6800 Mowry Ave, Newark, CA 94560",
+      "lat": null,
+      "lon": null,
+      "cost": "$14 per person (drop-in)",
+      "notes": "Combined Court 1 + Court 2 availability at Silliman Center. Court 1: 7:00 AM\u20131:00 PM, 3:00 PM\u20134:00 PM. Court 2: 7:00 AM\u20132:00 PM. Scraped from weekly Newark Rec Facebook poster (EasyOCR).",
+      "source_event_url": "https://www.facebook.com/Newarkrec/",
+      "courts": [
+        {
+          "name": "Court 1",
+          "windows": [
+            "7:00 AM\u20131:00 PM",
+            "3:00 PM\u20134:00 PM"
+          ]
+        },
+        {
+          "name": "Court 2",
+          "windows": [
+            "7:00 AM\u20132:00 PM"
+          ]
+        }
+      ],
+      "source": "newark_community_center"
     },
     {
       "venue": "Arrillaga Family Gymnasium",
@@ -1089,9 +917,554 @@
       "source": "arrillaga_family_gymnasium"
     },
     {
+      "venue": "Silliman Center",
+      "start": "2026-05-03T07:00-07:00",
+      "end": "2026-05-03T15:00-07:00",
+      "activity": "Drop-In Basketball",
+      "address": "6800 Mowry Ave, Newark, CA 94560",
+      "lat": null,
+      "lon": null,
+      "cost": "$14 per person (drop-in)",
+      "notes": "Combined Court 1 + Court 2 availability at Silliman Center. Court 1: 7:00 AM\u20133:00 PM. Court 2: 7:00 AM\u20131:30 PM. Scraped from weekly Newark Rec Facebook poster (EasyOCR).",
+      "source_event_url": "https://www.facebook.com/Newarkrec/",
+      "courts": [
+        {
+          "name": "Court 1",
+          "windows": [
+            "7:00 AM\u20133:00 PM"
+          ]
+        },
+        {
+          "name": "Court 2",
+          "windows": [
+            "7:00 AM\u20131:30 PM"
+          ]
+        }
+      ],
+      "source": "newark_community_center"
+    },
+    {
       "venue": "Peninsula Community Center",
       "start": "2026-05-03T12:00-07:00",
       "end": "2026-05-03T17:00-07:00",
+      "activity": "Open Gym",
+      "address": "3623 Jefferson Avenue, Redwood City, CA 94062",
+      "lat": null,
+      "lon": null,
+      "cost": "$55 per person (drop-in)",
+      "notes": "Room: Center Gym",
+      "source_event_url": "https://clients.mindbodyonline.com/classic/mainclass?studioid=782582&tabID=109",
+      "courts": null,
+      "source": "peninsula_community_center"
+    },
+    {
+      "venue": "Arrillaga Family Gymnasium",
+      "start": "2026-05-04T07:30-07:00",
+      "end": "2026-05-04T12:00-07:00",
+      "activity": "Court Rental",
+      "address": "600 Alma St, Menlo Park, CA 94025",
+      "lat": null,
+      "lon": null,
+      "cost": "Free drop-in (or $88.00/hr to reserve)",
+      "notes": "Combined Court 1 + Court 2 availability at Arrillaga Family Gymnasium. Court 1: 7:30 AM\u201312:00 PM. Court 2: 1:00 PM\u20134:00 PM. CatchCorner lists these as $88/hr rentals in 2-hour blocks, but if no one books a slot the court is open as free drop-in during the same window.",
+      "source_event_url": "https://www.catchcorner.com/facility-page/embedded/rental/arrillaga-family-gymnasium-city-of-menlo-park/Basketball",
+      "courts": [
+        {
+          "name": "Court 1",
+          "windows": [
+            "7:30 AM\u201312:00 PM"
+          ]
+        },
+        {
+          "name": "Court 2",
+          "windows": [
+            "1:00 PM\u20134:00 PM"
+          ]
+        }
+      ],
+      "source": "arrillaga_family_gymnasium"
+    },
+    {
+      "venue": "Peninsula Community Center",
+      "start": "2026-05-04T11:00-07:00",
+      "end": "2026-05-04T14:00-07:00",
+      "activity": "Open Gym",
+      "address": "3623 Jefferson Avenue, Redwood City, CA 94062",
+      "lat": null,
+      "lon": null,
+      "cost": "$55 per person (drop-in)",
+      "notes": "Room: Center Gym",
+      "source_event_url": "https://clients.mindbodyonline.com/classic/mainclass?studioid=782582&tabID=109",
+      "courts": null,
+      "source": "peninsula_community_center"
+    },
+    {
+      "venue": "Arrillaga Family Gymnasium",
+      "start": "2026-05-04T13:00-07:00",
+      "end": "2026-05-04T16:00-07:00",
+      "activity": "Court Rental",
+      "address": "600 Alma St, Menlo Park, CA 94025",
+      "lat": null,
+      "lon": null,
+      "cost": "Free drop-in (or $88.00/hr to reserve)",
+      "notes": "Combined Court 1 + Court 2 availability at Arrillaga Family Gymnasium. Court 1: 7:30 AM\u201312:00 PM. Court 2: 1:00 PM\u20134:00 PM. CatchCorner lists these as $88/hr rentals in 2-hour blocks, but if no one books a slot the court is open as free drop-in during the same window.",
+      "source_event_url": "https://www.catchcorner.com/facility-page/embedded/rental/arrillaga-family-gymnasium-city-of-menlo-park/Basketball",
+      "courts": [
+        {
+          "name": "Court 1",
+          "windows": [
+            "7:30 AM\u201312:00 PM"
+          ]
+        },
+        {
+          "name": "Court 2",
+          "windows": [
+            "1:00 PM\u20134:00 PM"
+          ]
+        }
+      ],
+      "source": "arrillaga_family_gymnasium"
+    },
+    {
+      "venue": "Arrillaga Family Gymnasium",
+      "start": "2026-05-05T08:30-07:00",
+      "end": "2026-05-05T12:00-07:00",
+      "activity": "Court Rental",
+      "address": "600 Alma St, Menlo Park, CA 94025",
+      "lat": null,
+      "lon": null,
+      "cost": "Free drop-in (or $88.00/hr to reserve)",
+      "notes": "Combined Court 1 + Court 2 availability at Arrillaga Family Gymnasium. Court 1: 9:30 AM\u201312:00 PM, 2:00 PM\u20134:00 PM. Court 2: 8:30 AM\u201312:00 PM, 2:00 PM\u20134:00 PM. CatchCorner lists these as $88/hr rentals in 2-hour blocks, but if no one books a slot the court is open as free drop-in during the same window.",
+      "source_event_url": "https://www.catchcorner.com/facility-page/embedded/rental/arrillaga-family-gymnasium-city-of-menlo-park/Basketball",
+      "courts": [
+        {
+          "name": "Court 1",
+          "windows": [
+            "9:30 AM\u201312:00 PM",
+            "2:00 PM\u20134:00 PM"
+          ]
+        },
+        {
+          "name": "Court 2",
+          "windows": [
+            "8:30 AM\u201312:00 PM",
+            "2:00 PM\u20134:00 PM"
+          ]
+        }
+      ],
+      "source": "arrillaga_family_gymnasium"
+    },
+    {
+      "venue": "Peninsula Community Center",
+      "start": "2026-05-05T11:00-07:00",
+      "end": "2026-05-05T15:00-07:00",
+      "activity": "Open Gym",
+      "address": "3623 Jefferson Avenue, Redwood City, CA 94062",
+      "lat": null,
+      "lon": null,
+      "cost": "$55 per person (drop-in)",
+      "notes": "Room: Center Gym",
+      "source_event_url": "https://clients.mindbodyonline.com/classic/mainclass?studioid=782582&tabID=109",
+      "courts": null,
+      "source": "peninsula_community_center"
+    },
+    {
+      "venue": "Arrillaga Family Gymnasium",
+      "start": "2026-05-05T14:00-07:00",
+      "end": "2026-05-05T16:00-07:00",
+      "activity": "Court Rental",
+      "address": "600 Alma St, Menlo Park, CA 94025",
+      "lat": null,
+      "lon": null,
+      "cost": "Free drop-in (or $88.00/hr to reserve)",
+      "notes": "Combined Court 1 + Court 2 availability at Arrillaga Family Gymnasium. Court 1: 9:30 AM\u201312:00 PM, 2:00 PM\u20134:00 PM. Court 2: 8:30 AM\u201312:00 PM, 2:00 PM\u20134:00 PM. CatchCorner lists these as $88/hr rentals in 2-hour blocks, but if no one books a slot the court is open as free drop-in during the same window.",
+      "source_event_url": "https://www.catchcorner.com/facility-page/embedded/rental/arrillaga-family-gymnasium-city-of-menlo-park/Basketball",
+      "courts": [
+        {
+          "name": "Court 1",
+          "windows": [
+            "9:30 AM\u201312:00 PM",
+            "2:00 PM\u20134:00 PM"
+          ]
+        },
+        {
+          "name": "Court 2",
+          "windows": [
+            "8:30 AM\u201312:00 PM",
+            "2:00 PM\u20134:00 PM"
+          ]
+        }
+      ],
+      "source": "arrillaga_family_gymnasium"
+    },
+    {
+      "venue": "Peninsula Community Center",
+      "start": "2026-05-05T18:00-07:00",
+      "end": "2026-05-05T20:00-07:00",
+      "activity": "Open Gym",
+      "address": "3623 Jefferson Avenue, Redwood City, CA 94062",
+      "lat": null,
+      "lon": null,
+      "cost": "$55 per person (drop-in)",
+      "notes": "Room: Center Gym",
+      "source_event_url": "https://clients.mindbodyonline.com/classic/mainclass?studioid=782582&tabID=109",
+      "courts": null,
+      "source": "peninsula_community_center"
+    },
+    {
+      "venue": "Arrillaga Family Gymnasium",
+      "start": "2026-05-06T07:30-07:00",
+      "end": "2026-05-06T12:00-07:00",
+      "activity": "Court Rental",
+      "address": "600 Alma St, Menlo Park, CA 94025",
+      "lat": null,
+      "lon": null,
+      "cost": "Free drop-in (or $88.00/hr to reserve)",
+      "notes": "Combined Court 1 + Court 2 availability at Arrillaga Family Gymnasium. Court 1: 7:30 AM\u201312:00 PM. Court 2: 1:00 PM\u20134:30 PM. CatchCorner lists these as $88/hr rentals in 2-hour blocks, but if no one books a slot the court is open as free drop-in during the same window.",
+      "source_event_url": "https://www.catchcorner.com/facility-page/embedded/rental/arrillaga-family-gymnasium-city-of-menlo-park/Basketball",
+      "courts": [
+        {
+          "name": "Court 1",
+          "windows": [
+            "7:30 AM\u201312:00 PM"
+          ]
+        },
+        {
+          "name": "Court 2",
+          "windows": [
+            "1:00 PM\u20134:30 PM"
+          ]
+        }
+      ],
+      "source": "arrillaga_family_gymnasium"
+    },
+    {
+      "venue": "Peninsula Community Center",
+      "start": "2026-05-06T11:00-07:00",
+      "end": "2026-05-06T14:00-07:00",
+      "activity": "Open Gym",
+      "address": "3623 Jefferson Avenue, Redwood City, CA 94062",
+      "lat": null,
+      "lon": null,
+      "cost": "$55 per person (drop-in)",
+      "notes": "Room: Center Gym",
+      "source_event_url": "https://clients.mindbodyonline.com/classic/mainclass?studioid=782582&tabID=109",
+      "courts": null,
+      "source": "peninsula_community_center"
+    },
+    {
+      "venue": "Arrillaga Family Gymnasium",
+      "start": "2026-05-06T13:00-07:00",
+      "end": "2026-05-06T16:30-07:00",
+      "activity": "Court Rental",
+      "address": "600 Alma St, Menlo Park, CA 94025",
+      "lat": null,
+      "lon": null,
+      "cost": "Free drop-in (or $88.00/hr to reserve)",
+      "notes": "Combined Court 1 + Court 2 availability at Arrillaga Family Gymnasium. Court 1: 7:30 AM\u201312:00 PM. Court 2: 1:00 PM\u20134:30 PM. CatchCorner lists these as $88/hr rentals in 2-hour blocks, but if no one books a slot the court is open as free drop-in during the same window.",
+      "source_event_url": "https://www.catchcorner.com/facility-page/embedded/rental/arrillaga-family-gymnasium-city-of-menlo-park/Basketball",
+      "courts": [
+        {
+          "name": "Court 1",
+          "windows": [
+            "7:30 AM\u201312:00 PM"
+          ]
+        },
+        {
+          "name": "Court 2",
+          "windows": [
+            "1:00 PM\u20134:30 PM"
+          ]
+        }
+      ],
+      "source": "arrillaga_family_gymnasium"
+    },
+    {
+      "venue": "Arrillaga Family Gymnasium",
+      "start": "2026-05-07T08:30-07:00",
+      "end": "2026-05-07T12:00-07:00",
+      "activity": "Court Rental",
+      "address": "600 Alma St, Menlo Park, CA 94025",
+      "lat": null,
+      "lon": null,
+      "cost": "Free drop-in (or $88.00/hr to reserve)",
+      "notes": "Combined Court 1 + Court 2 availability at Arrillaga Family Gymnasium. Court 1: 9:30 AM\u201312:00 PM, 2:00 PM\u20134:00 PM. Court 2: 8:30 AM\u201312:00 PM, 2:00 PM\u20134:00 PM. CatchCorner lists these as $88/hr rentals in 2-hour blocks, but if no one books a slot the court is open as free drop-in during the same window.",
+      "source_event_url": "https://www.catchcorner.com/facility-page/embedded/rental/arrillaga-family-gymnasium-city-of-menlo-park/Basketball",
+      "courts": [
+        {
+          "name": "Court 1",
+          "windows": [
+            "9:30 AM\u201312:00 PM",
+            "2:00 PM\u20134:00 PM"
+          ]
+        },
+        {
+          "name": "Court 2",
+          "windows": [
+            "8:30 AM\u201312:00 PM",
+            "2:00 PM\u20134:00 PM"
+          ]
+        }
+      ],
+      "source": "arrillaga_family_gymnasium"
+    },
+    {
+      "venue": "Peninsula Community Center",
+      "start": "2026-05-07T11:00-07:00",
+      "end": "2026-05-07T15:00-07:00",
+      "activity": "Open Gym",
+      "address": "3623 Jefferson Avenue, Redwood City, CA 94062",
+      "lat": null,
+      "lon": null,
+      "cost": "$55 per person (drop-in)",
+      "notes": "Room: Center Gym",
+      "source_event_url": "https://clients.mindbodyonline.com/classic/mainclass?studioid=782582&tabID=109",
+      "courts": null,
+      "source": "peninsula_community_center"
+    },
+    {
+      "venue": "Arrillaga Family Gymnasium",
+      "start": "2026-05-07T14:00-07:00",
+      "end": "2026-05-07T16:00-07:00",
+      "activity": "Court Rental",
+      "address": "600 Alma St, Menlo Park, CA 94025",
+      "lat": null,
+      "lon": null,
+      "cost": "Free drop-in (or $88.00/hr to reserve)",
+      "notes": "Combined Court 1 + Court 2 availability at Arrillaga Family Gymnasium. Court 1: 9:30 AM\u201312:00 PM, 2:00 PM\u20134:00 PM. Court 2: 8:30 AM\u201312:00 PM, 2:00 PM\u20134:00 PM. CatchCorner lists these as $88/hr rentals in 2-hour blocks, but if no one books a slot the court is open as free drop-in during the same window.",
+      "source_event_url": "https://www.catchcorner.com/facility-page/embedded/rental/arrillaga-family-gymnasium-city-of-menlo-park/Basketball",
+      "courts": [
+        {
+          "name": "Court 1",
+          "windows": [
+            "9:30 AM\u201312:00 PM",
+            "2:00 PM\u20134:00 PM"
+          ]
+        },
+        {
+          "name": "Court 2",
+          "windows": [
+            "8:30 AM\u201312:00 PM",
+            "2:00 PM\u20134:00 PM"
+          ]
+        }
+      ],
+      "source": "arrillaga_family_gymnasium"
+    },
+    {
+      "venue": "Peninsula Community Center",
+      "start": "2026-05-07T18:00-07:00",
+      "end": "2026-05-07T20:00-07:00",
+      "activity": "Adult Basketball Pick-Up Game",
+      "address": "3623 Jefferson Avenue, Redwood City, CA 94062",
+      "lat": null,
+      "lon": null,
+      "cost": "$55 per person (drop-in)",
+      "notes": "Room: Center Gym",
+      "source_event_url": "https://clients.mindbodyonline.com/classic/mainclass?studioid=782582&tabID=109",
+      "courts": null,
+      "source": "peninsula_community_center"
+    },
+    {
+      "venue": "Arrillaga Family Gymnasium",
+      "start": "2026-05-08T07:30-07:00",
+      "end": "2026-05-08T12:00-07:00",
+      "activity": "Court Rental",
+      "address": "600 Alma St, Menlo Park, CA 94025",
+      "lat": null,
+      "lon": null,
+      "cost": "Free drop-in (or $88.00/hr to reserve)",
+      "notes": "Combined Court 1 + Court 2 availability at Arrillaga Family Gymnasium. Court 1: 7:30 AM\u201312:00 PM. Court 2: 1:00 PM\u20134:00 PM. CatchCorner lists these as $88/hr rentals in 2-hour blocks, but if no one books a slot the court is open as free drop-in during the same window.",
+      "source_event_url": "https://www.catchcorner.com/facility-page/embedded/rental/arrillaga-family-gymnasium-city-of-menlo-park/Basketball",
+      "courts": [
+        {
+          "name": "Court 1",
+          "windows": [
+            "7:30 AM\u201312:00 PM"
+          ]
+        },
+        {
+          "name": "Court 2",
+          "windows": [
+            "1:00 PM\u20134:00 PM"
+          ]
+        }
+      ],
+      "source": "arrillaga_family_gymnasium"
+    },
+    {
+      "venue": "Peninsula Community Center",
+      "start": "2026-05-08T11:00-07:00",
+      "end": "2026-05-08T14:00-07:00",
+      "activity": "Open Gym",
+      "address": "3623 Jefferson Avenue, Redwood City, CA 94062",
+      "lat": null,
+      "lon": null,
+      "cost": "$55 per person (drop-in)",
+      "notes": "Room: Center Gym",
+      "source_event_url": "https://clients.mindbodyonline.com/classic/mainclass?studioid=782582&tabID=109",
+      "courts": null,
+      "source": "peninsula_community_center"
+    },
+    {
+      "venue": "Arrillaga Family Gymnasium",
+      "start": "2026-05-08T13:00-07:00",
+      "end": "2026-05-08T16:00-07:00",
+      "activity": "Court Rental",
+      "address": "600 Alma St, Menlo Park, CA 94025",
+      "lat": null,
+      "lon": null,
+      "cost": "Free drop-in (or $88.00/hr to reserve)",
+      "notes": "Combined Court 1 + Court 2 availability at Arrillaga Family Gymnasium. Court 1: 7:30 AM\u201312:00 PM. Court 2: 1:00 PM\u20134:00 PM. CatchCorner lists these as $88/hr rentals in 2-hour blocks, but if no one books a slot the court is open as free drop-in during the same window.",
+      "source_event_url": "https://www.catchcorner.com/facility-page/embedded/rental/arrillaga-family-gymnasium-city-of-menlo-park/Basketball",
+      "courts": [
+        {
+          "name": "Court 1",
+          "windows": [
+            "7:30 AM\u201312:00 PM"
+          ]
+        },
+        {
+          "name": "Court 2",
+          "windows": [
+            "1:00 PM\u20134:00 PM"
+          ]
+        }
+      ],
+      "source": "arrillaga_family_gymnasium"
+    },
+    {
+      "venue": "Peninsula Community Center",
+      "start": "2026-05-08T17:00-07:00",
+      "end": "2026-05-08T20:00-07:00",
+      "activity": "Open Gym",
+      "address": "3623 Jefferson Avenue, Redwood City, CA 94062",
+      "lat": null,
+      "lon": null,
+      "cost": "$55 per person (drop-in)",
+      "notes": "Room: Center Gym",
+      "source_event_url": "https://clients.mindbodyonline.com/classic/mainclass?studioid=782582&tabID=109",
+      "courts": null,
+      "source": "peninsula_community_center"
+    },
+    {
+      "venue": "Arrillaga Family Gymnasium",
+      "start": "2026-05-09T07:30-07:00",
+      "end": "2026-05-09T17:00-07:00",
+      "activity": "Court Rental",
+      "address": "600 Alma St, Menlo Park, CA 94025",
+      "lat": null,
+      "lon": null,
+      "cost": "Free drop-in (or $88.00/hr to reserve)",
+      "notes": "Combined Court 1 + Court 2 availability at Arrillaga Family Gymnasium. Court 1: 7:30 AM\u20135:00 PM, 8:00 PM\u201310:00 PM. Court 2: 8:30 AM\u20135:00 PM, 8:00 PM\u201310:00 PM. CatchCorner lists these as $88/hr rentals in 2-hour blocks, but if no one books a slot the court is open as free drop-in during the same window.",
+      "source_event_url": "https://www.catchcorner.com/facility-page/embedded/rental/arrillaga-family-gymnasium-city-of-menlo-park/Basketball",
+      "courts": [
+        {
+          "name": "Court 1",
+          "windows": [
+            "7:30 AM\u20135:00 PM",
+            "8:00 PM\u201310:00 PM"
+          ]
+        },
+        {
+          "name": "Court 2",
+          "windows": [
+            "8:30 AM\u20135:00 PM",
+            "8:00 PM\u201310:00 PM"
+          ]
+        }
+      ],
+      "source": "arrillaga_family_gymnasium"
+    },
+    {
+      "venue": "Peninsula Community Center",
+      "start": "2026-05-09T10:00-07:00",
+      "end": "2026-05-09T12:00-07:00",
+      "activity": "Adult Basketball Pick-Up Game",
+      "address": "3623 Jefferson Avenue, Redwood City, CA 94062",
+      "lat": null,
+      "lon": null,
+      "cost": "$55 per person (drop-in)",
+      "notes": "Room: Center Gym",
+      "source_event_url": "https://clients.mindbodyonline.com/classic/mainclass?studioid=782582&tabID=109",
+      "courts": null,
+      "source": "peninsula_community_center"
+    },
+    {
+      "venue": "Peninsula Community Center",
+      "start": "2026-05-09T12:00-07:00",
+      "end": "2026-05-09T20:00-07:00",
+      "activity": "Open Gym",
+      "address": "3623 Jefferson Avenue, Redwood City, CA 94062",
+      "lat": null,
+      "lon": null,
+      "cost": "$55 per person (drop-in)",
+      "notes": "Room: Center Gym",
+      "source_event_url": "https://clients.mindbodyonline.com/classic/mainclass?studioid=782582&tabID=109",
+      "courts": null,
+      "source": "peninsula_community_center"
+    },
+    {
+      "venue": "Arrillaga Family Gymnasium",
+      "start": "2026-05-09T20:00-07:00",
+      "end": "2026-05-09T22:00-07:00",
+      "activity": "Court Rental",
+      "address": "600 Alma St, Menlo Park, CA 94025",
+      "lat": null,
+      "lon": null,
+      "cost": "Free drop-in (or $88.00/hr to reserve)",
+      "notes": "Combined Court 1 + Court 2 availability at Arrillaga Family Gymnasium. Court 1: 7:30 AM\u20135:00 PM, 8:00 PM\u201310:00 PM. Court 2: 8:30 AM\u20135:00 PM, 8:00 PM\u201310:00 PM. CatchCorner lists these as $88/hr rentals in 2-hour blocks, but if no one books a slot the court is open as free drop-in during the same window.",
+      "source_event_url": "https://www.catchcorner.com/facility-page/embedded/rental/arrillaga-family-gymnasium-city-of-menlo-park/Basketball",
+      "courts": [
+        {
+          "name": "Court 1",
+          "windows": [
+            "7:30 AM\u20135:00 PM",
+            "8:00 PM\u201310:00 PM"
+          ]
+        },
+        {
+          "name": "Court 2",
+          "windows": [
+            "8:30 AM\u20135:00 PM",
+            "8:00 PM\u201310:00 PM"
+          ]
+        }
+      ],
+      "source": "arrillaga_family_gymnasium"
+    },
+    {
+      "venue": "Arrillaga Family Gymnasium",
+      "start": "2026-05-10T06:30-07:00",
+      "end": "2026-05-10T15:00-07:00",
+      "activity": "Court Rental",
+      "address": "600 Alma St, Menlo Park, CA 94025",
+      "lat": null,
+      "lon": null,
+      "cost": "Free drop-in (or $88.00/hr to reserve)",
+      "notes": "Combined Court 1 + Court 2 availability at Arrillaga Family Gymnasium. Court 1: 6:30 AM\u20132:00 PM. Court 2: 6:30 AM\u20139:00 AM, 12:00 PM\u20133:00 PM. CatchCorner lists these as $88/hr rentals in 2-hour blocks, but if no one books a slot the court is open as free drop-in during the same window.",
+      "source_event_url": "https://www.catchcorner.com/facility-page/embedded/rental/arrillaga-family-gymnasium-city-of-menlo-park/Basketball",
+      "courts": [
+        {
+          "name": "Court 1",
+          "windows": [
+            "6:30 AM\u20132:00 PM"
+          ]
+        },
+        {
+          "name": "Court 2",
+          "windows": [
+            "6:30 AM\u20139:00 AM",
+            "12:00 PM\u20133:00 PM"
+          ]
+        }
+      ],
+      "source": "arrillaga_family_gymnasium"
+    },
+    {
+      "venue": "Peninsula Community Center",
+      "start": "2026-05-10T12:00-07:00",
+      "end": "2026-05-10T17:00-07:00",
       "activity": "Open Gym",
       "address": "3623 Jefferson Avenue, Redwood City, CA 94062",
       "lat": null,
