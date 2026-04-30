@@ -35,7 +35,7 @@ from __future__ import annotations
 import json
 import re
 import sys
-from datetime import datetime
+from datetime import datetime, timedelta
 from urllib.parse import urljoin
 
 from playwright.sync_api import sync_playwright
@@ -64,15 +64,8 @@ ARMORY_VENUE_HINT = "armory"
 # ── stage 1: discover event URLs ──────────────────────────────────────────
 
 
-def collect_basketball_event_urls(page) -> list[str]:
-    polite_goto(page, SOURCE_URL, wait_until="domcontentloaded")
-    page.wait_for_selector(
-        "a[href*='/Home/Components/Calendar/Event/']",
-        timeout=20000,
-        state="attached",
-    )
-
-    hrefs: set[str] = set()
+def _collect_basketball_hrefs(page, hrefs: set[str]):
+    """Add basketball event URLs from the current calendar view to *hrefs*."""
     for a in page.query_selector_all("a[href*='/Home/Components/Calendar/Event/']"):
         text = (a.inner_text() or "").strip()
         if "basketball" not in text.lower():
@@ -80,6 +73,39 @@ def collect_basketball_event_urls(page) -> list[str]:
         href = a.get_attribute("href") or ""
         if EVENT_HREF_RE.search(href):
             hrefs.add(urljoin(SOURCE_URL, href))
+
+
+def _months_in_window() -> list[tuple[int, int]]:
+    """Return sorted (year, month) tuples covering the data window."""
+    window_start, window_end = data_window_range()
+    months: set[tuple[int, int]] = set()
+    d = window_start.date()
+    last_date = (window_end - timedelta(days=1)).date()
+    while d <= last_date:
+        months.add((d.year, d.month))
+        if d.month == 12:
+            d = d.replace(year=d.year + 1, month=1, day=1)
+        else:
+            d = d.replace(month=d.month + 1, day=1)
+    return sorted(months)
+
+
+def collect_basketball_event_urls(page) -> list[str]:
+    hrefs: set[str] = set()
+    for year, month in _months_in_window():
+        url = f"{SOURCE_URL}/-curm-{month}/-cury-{year}"
+        polite_goto(page, url, wait_until="domcontentloaded")
+        try:
+            page.wait_for_selector(
+                "a[href*='/Home/Components/Calendar/Event/']",
+                timeout=20000,
+                state="attached",
+            )
+        except Exception:
+            print(f"[{SOURCE_NAME}] no calendar events for {year}-{month:02d}", file=sys.stderr)
+            continue
+        _collect_basketball_hrefs(page, hrefs)
+        print(f"[{SOURCE_NAME}] {year}-{month:02d}: {len(hrefs)} basketball URLs so far", file=sys.stderr)
     return sorted(hrefs)
 
 
@@ -311,7 +337,7 @@ def scrape() -> ScrapeResult:
         page = ctx.new_page()
         urls = collect_basketball_event_urls(page)
         print(f"[{SOURCE_NAME}] found {len(urls)} basketball events", file=sys.stderr)
-        for url in urls:
+        for i, url in enumerate(urls, 1):
             try:
                 event = parse_event_page(page, url)
             except Exception as e:  # noqa: BLE001
@@ -319,6 +345,8 @@ def scrape() -> ScrapeResult:
                 continue
             if event:
                 raw_events.append(event)
+            if i % 10 == 0 or i == len(urls):
+                print(f"[{SOURCE_NAME}] visited {i}/{len(urls)} event pages", file=sys.stderr)
         browser.close()
 
     print(
