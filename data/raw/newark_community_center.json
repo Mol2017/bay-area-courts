@@ -2,12 +2,12 @@
   "schema_version": 1,
   "source": "newark_community_center",
   "source_url": "https://www.facebook.com/Newarkrec/",
-  "scraped_at": "2026-05-10T07:53:44-07:00",
+  "scraped_at": "2026-05-11T09:34:52-07:00",
   "sessions": [
     {
       "venue": "Silliman Center",
-      "start": "2026-05-04T06:00-07:00",
-      "end": "2026-05-04T17:00-07:00",
+      "start": "2026-05-11T06:00-07:00",
+      "end": "2026-05-11T17:00-07:00",
       "activity": "Drop-In Basketball",
       "address": "6800 Mowry Ave, Newark, CA 94560",
       "lat": null,
@@ -33,8 +33,8 @@
     },
     {
       "venue": "Silliman Center",
-      "start": "2026-05-04T18:00-07:00",
-      "end": "2026-05-04T21:00-07:00",
+      "start": "2026-05-11T18:00-07:00",
+      "end": "2026-05-11T21:00-07:00",
       "activity": "Drop-In Basketball",
       "address": "6800 Mowry Ave, Newark, CA 94560",
       "lat": null,
@@ -60,8 +60,8 @@
     },
     {
       "venue": "Silliman Center",
-      "start": "2026-05-05T06:00-07:00",
-      "end": "2026-05-05T18:00-07:00",
+      "start": "2026-05-12T06:00-07:00",
+      "end": "2026-05-12T18:00-07:00",
       "activity": "Drop-In Basketball",
       "address": "6800 Mowry Ave, Newark, CA 94560",
       "lat": null,
@@ -87,8 +87,8 @@
     },
     {
       "venue": "Silliman Center",
-      "start": "2026-05-06T06:00-07:00",
-      "end": "2026-05-06T21:00-07:00",
+      "start": "2026-05-13T06:00-07:00",
+      "end": "2026-05-13T21:00-07:00",
       "activity": "Drop-In Basketball",
       "address": "6800 Mowry Ave, Newark, CA 94560",
       "lat": null,
@@ -113,8 +113,8 @@
     },
     {
       "venue": "Silliman Center",
-      "start": "2026-05-07T06:00-07:00",
-      "end": "2026-05-07T17:00-07:00",
+      "start": "2026-05-14T06:00-07:00",
+      "end": "2026-05-14T17:00-07:00",
       "activity": "Drop-In Basketball",
       "address": "6800 Mowry Ave, Newark, CA 94560",
       "lat": null,
@@ -140,8 +140,8 @@
     },
     {
       "venue": "Silliman Center",
-      "start": "2026-05-07T18:00-07:00",
-      "end": "2026-05-07T21:00-07:00",
+      "start": "2026-05-14T18:00-07:00",
+      "end": "2026-05-14T21:00-07:00",
       "activity": "Drop-In Basketball",
       "address": "6800 Mowry Ave, Newark, CA 94560",
       "lat": null,
@@ -167,62 +167,48 @@
     },
     {
       "venue": "Silliman Center",
-      "start": "2026-05-09T07:00-07:00",
-      "end": "2026-05-09T14:00-07:00",
+      "start": "2026-05-15T06:00-07:00",
+      "end": "2026-05-15T17:00-07:00",
       "activity": "Drop-In Basketball",
       "address": "6800 Mowry Ave, Newark, CA 94560",
       "lat": null,
       "lon": null,
       "cost": "$14 per person (drop-in)",
-      "notes": "Combined Court 1 + Court 2 availability at Silliman Center. Court 1: 7:00 AM\u20131:00 PM, 3:00 PM\u20134:00 PM. Court 2: 7:00 AM\u20132:00 PM. Scraped from weekly Newark Rec Facebook poster (EasyOCR).",
+      "notes": "Combined Court 2 availability at Silliman Center. Court 2: 6:00 AM\u20135:00 PM. Scraped from weekly Newark Rec Facebook poster (EasyOCR).",
       "source_event_url": "https://www.facebook.com/Newarkrec/",
       "courts": [
         {
-          "name": "Court 1",
-          "windows": [
-            "7:00 AM\u20131:00 PM",
-            "3:00 PM\u20134:00 PM"
-          ]
-        },
-        {
           "name": "Court 2",
           "windows": [
-            "7:00 AM\u20132:00 PM"
+            "6:00 AM\u20135:00 PM"
           ]
         }
       ]
     },
     {
       "venue": "Silliman Center",
-      "start": "2026-05-09T15:00-07:00",
-      "end": "2026-05-09T16:00-07:00",
+      "start": "2026-05-16T07:00-07:00",
+      "end": "2026-05-16T15:00-07:00",
       "activity": "Drop-In Basketball",
       "address": "6800 Mowry Ave, Newark, CA 94560",
       "lat": null,
       "lon": null,
       "cost": "$14 per person (drop-in)",
-      "notes": "Combined Court 1 + Court 2 availability at Silliman Center. Court 1: 7:00 AM\u20131:00 PM, 3:00 PM\u20134:00 PM. Court 2: 7:00 AM\u20132:00 PM. Scraped from weekly Newark Rec Facebook poster (EasyOCR).",
+      "notes": "Combined Court 1 availability at Silliman Center. Court 1: 7:00 AM\u20133:00 PM. Scraped from weekly Newark Rec Facebook poster (EasyOCR).",
       "source_event_url": "https://www.facebook.com/Newarkrec/",
       "courts": [
         {
           "name": "Court 1",
           "windows": [
-            "7:00 AM\u20131:00 PM",
-            "3:00 PM\u20134:00 PM"
-          ]
-        },
-        {
-          "name": "Court 2",
-          "windows": [
-            "7:00 AM\u20132:00 PM"
+            "7:00 AM\u20133:00 PM"
           ]
         }
       ]
     },
     {
       "venue": "Silliman Center",
-      "start": "2026-05-10T07:00-07:00",
-      "end": "2026-05-10T15:00-07:00",
+      "start": "2026-05-17T07:00-07:00",
+      "end": "2026-05-17T15:00-07:00",
       "activity": "Drop-In Basketball",
       "address": "6800 Mowry Ave, Newark, CA 94560",
       "lat": null,
