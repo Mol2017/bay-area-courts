@@ -1,9 +1,38 @@
 {
-  "generated_at": "2026-06-16T08:48:11-07:00",
+  "generated_at": "2026-06-17T08:45:50-07:00",
   "window_start": "2026-06-15",
   "window_end": "2026-06-29",
   "weeks": 2,
   "sessions": [
+    {
+      "venue": "Silliman Center",
+      "start": "2026-06-15T06:00-07:00",
+      "end": "2026-06-15T08:00-07:00",
+      "activity": "Drop-In Basketball",
+      "address": "6800 Mowry Ave, Newark, CA 94560",
+      "lat": null,
+      "lon": null,
+      "cost": "$14 per person (drop-in)",
+      "notes": "Combined Court 1 + Court 2 availability at Silliman Center. Court 1: 6:00 AM\u20138:00 AM, 4:00 PM\u20135:00 PM, 6:00 PM\u20139:00 PM. Court 2: 6:00 AM\u20138:00 AM. Scraped from weekly Newark Rec Facebook poster (EasyOCR).",
+      "source_event_url": "https://www.facebook.com/Newarkrec/",
+      "courts": [
+        {
+          "name": "Court 1",
+          "windows": [
+            "6:00 AM\u20138:00 AM",
+            "4:00 PM\u20135:00 PM",
+            "6:00 PM\u20139:00 PM"
+          ]
+        },
+        {
+          "name": "Court 2",
+          "windows": [
+            "6:00 AM\u20138:00 AM"
+          ]
+        }
+      ],
+      "source": "newark_community_center"
+    },
     {
       "venue": "Peninsula Community Center",
       "start": "2026-06-15T11:00-07:00",
@@ -40,6 +69,35 @@
       "source": "red_morton_community_center"
     },
     {
+      "venue": "Silliman Center",
+      "start": "2026-06-15T16:00-07:00",
+      "end": "2026-06-15T17:00-07:00",
+      "activity": "Drop-In Basketball",
+      "address": "6800 Mowry Ave, Newark, CA 94560",
+      "lat": null,
+      "lon": null,
+      "cost": "$14 per person (drop-in)",
+      "notes": "Combined Court 1 + Court 2 availability at Silliman Center. Court 1: 6:00 AM\u20138:00 AM, 4:00 PM\u20135:00 PM, 6:00 PM\u20139:00 PM. Court 2: 6:00 AM\u20138:00 AM. Scraped from weekly Newark Rec Facebook poster (EasyOCR).",
+      "source_event_url": "https://www.facebook.com/Newarkrec/",
+      "courts": [
+        {
+          "name": "Court 1",
+          "windows": [
+            "6:00 AM\u20138:00 AM",
+            "4:00 PM\u20135:00 PM",
+            "6:00 PM\u20139:00 PM"
+          ]
+        },
+        {
+          "name": "Court 2",
+          "windows": [
+            "6:00 AM\u20138:00 AM"
+          ]
+        }
+      ],
+      "source": "newark_community_center"
+    },
+    {
       "venue": "Peninsula Community Center",
       "start": "2026-06-15T17:00-07:00",
       "end": "2026-06-15T20:00-07:00",
@@ -52,6 +110,35 @@
       "source_event_url": "https://clients.mindbodyonline.com/classic/mainclass?studioid=782582&tabID=109",
       "courts": null,
       "source": "peninsula_community_center"
+    },
+    {
+      "venue": "Silliman Center",
+      "start": "2026-06-15T18:00-07:00",
+      "end": "2026-06-15T21:00-07:00",
+      "activity": "Drop-In Basketball",
+      "address": "6800 Mowry Ave, Newark, CA 94560",
+      "lat": null,
+      "lon": null,
+      "cost": "$14 per person (drop-in)",
+      "notes": "Combined Court 1 + Court 2 availability at Silliman Center. Court 1: 6:00 AM\u20138:00 AM, 4:00 PM\u20135:00 PM, 6:00 PM\u20139:00 PM. Court 2: 6:00 AM\u20138:00 AM. Scraped from weekly Newark Rec Facebook poster (EasyOCR).",
+      "source_event_url": "https://www.facebook.com/Newarkrec/",
+      "courts": [
+        {
+          "name": "Court 1",
+          "windows": [
+            "6:00 AM\u20138:00 AM",
+            "4:00 PM\u20135:00 PM",
+            "6:00 PM\u20139:00 PM"
+          ]
+        },
+        {
+          "name": "Court 2",
+          "windows": [
+            "6:00 AM\u20138:00 AM"
+          ]
+        }
+      ],
+      "source": "newark_community_center"
     },
     {
       "venue": "Red Morton Community Center",
@@ -73,6 +160,33 @@
         }
       ],
       "source": "red_morton_community_center"
+    },
+    {
+      "venue": "Silliman Center",
+      "start": "2026-06-16T06:00-07:00",
+      "end": "2026-06-16T08:00-07:00",
+      "activity": "Drop-In Basketball",
+      "address": "6800 Mowry Ave, Newark, CA 94560",
+      "lat": null,
+      "lon": null,
+      "cost": "$14 per person (drop-in)",
+      "notes": "Combined Court 1 + Court 2 availability at Silliman Center. Court 1: 6:00 AM\u20138:00 AM. Court 2: 6:00 AM\u20138:00 AM. Scraped from weekly Newark Rec Facebook poster (EasyOCR).",
+      "source_event_url": "https://www.facebook.com/Newarkrec/",
+      "courts": [
+        {
+          "name": "Court 1",
+          "windows": [
+            "6:00 AM\u20138:00 AM"
+          ]
+        },
+        {
+          "name": "Court 2",
+          "windows": [
+            "6:00 AM\u20138:00 AM"
+          ]
+        }
+      ],
+      "source": "newark_community_center"
     },
     {
       "venue": "Peninsula Community Center",
@@ -131,6 +245,35 @@
       "source": "red_morton_community_center"
     },
     {
+      "venue": "Silliman Center",
+      "start": "2026-06-17T06:00-07:00",
+      "end": "2026-06-17T08:00-07:00",
+      "activity": "Drop-In Basketball",
+      "address": "6800 Mowry Ave, Newark, CA 94560",
+      "lat": null,
+      "lon": null,
+      "cost": "$14 per person (drop-in)",
+      "notes": "Combined Court 1 + Court 2 availability at Silliman Center. Court 1: 6:00 AM\u20138:00 AM, 4:00 PM\u20139:00 PM. Court 2: 6:00 AM\u20138:00 AM, 6:30 PM\u20139:00 PM. Scraped from weekly Newark Rec Facebook poster (EasyOCR).",
+      "source_event_url": "https://www.facebook.com/Newarkrec/",
+      "courts": [
+        {
+          "name": "Court 1",
+          "windows": [
+            "6:00 AM\u20138:00 AM",
+            "4:00 PM\u20139:00 PM"
+          ]
+        },
+        {
+          "name": "Court 2",
+          "windows": [
+            "6:00 AM\u20138:00 AM",
+            "6:30 PM\u20139:00 PM"
+          ]
+        }
+      ],
+      "source": "newark_community_center"
+    },
+    {
       "venue": "Peninsula Community Center",
       "start": "2026-06-17T11:00-07:00",
       "end": "2026-06-17T14:00-07:00",
@@ -164,6 +307,35 @@
         }
       ],
       "source": "red_morton_community_center"
+    },
+    {
+      "venue": "Silliman Center",
+      "start": "2026-06-17T16:00-07:00",
+      "end": "2026-06-17T21:00-07:00",
+      "activity": "Drop-In Basketball",
+      "address": "6800 Mowry Ave, Newark, CA 94560",
+      "lat": null,
+      "lon": null,
+      "cost": "$14 per person (drop-in)",
+      "notes": "Combined Court 1 + Court 2 availability at Silliman Center. Court 1: 6:00 AM\u20138:00 AM, 4:00 PM\u20139:00 PM. Court 2: 6:00 AM\u20138:00 AM, 6:30 PM\u20139:00 PM. Scraped from weekly Newark Rec Facebook poster (EasyOCR).",
+      "source_event_url": "https://www.facebook.com/Newarkrec/",
+      "courts": [
+        {
+          "name": "Court 1",
+          "windows": [
+            "6:00 AM\u20138:00 AM",
+            "4:00 PM\u20139:00 PM"
+          ]
+        },
+        {
+          "name": "Court 2",
+          "windows": [
+            "6:00 AM\u20138:00 AM",
+            "6:30 PM\u20139:00 PM"
+          ]
+        }
+      ],
+      "source": "newark_community_center"
     },
     {
       "venue": "Peninsula Community Center",
@@ -201,6 +373,35 @@
       "source": "red_morton_community_center"
     },
     {
+      "venue": "Silliman Center",
+      "start": "2026-06-18T06:00-07:00",
+      "end": "2026-06-18T08:00-07:00",
+      "activity": "Drop-In Basketball",
+      "address": "6800 Mowry Ave, Newark, CA 94560",
+      "lat": null,
+      "lon": null,
+      "cost": "$14 per person (drop-in)",
+      "notes": "Combined Court 1 + Court 2 availability at Silliman Center. Court 1: 6:00 AM\u20138:00 AM, 4:00 PM\u20135:30 PM. Court 2: 6:00 AM\u20138:00 AM, 3:00 PM\u20134:00 PM. Scraped from weekly Newark Rec Facebook poster (EasyOCR).",
+      "source_event_url": "https://www.facebook.com/Newarkrec/",
+      "courts": [
+        {
+          "name": "Court 1",
+          "windows": [
+            "6:00 AM\u20138:00 AM",
+            "4:00 PM\u20135:30 PM"
+          ]
+        },
+        {
+          "name": "Court 2",
+          "windows": [
+            "6:00 AM\u20138:00 AM",
+            "3:00 PM\u20134:00 PM"
+          ]
+        }
+      ],
+      "source": "newark_community_center"
+    },
+    {
       "venue": "Peninsula Community Center",
       "start": "2026-06-18T11:00-07:00",
       "end": "2026-06-18T15:00-07:00",
@@ -213,6 +414,35 @@
       "source_event_url": "https://clients.mindbodyonline.com/classic/mainclass?studioid=782582&tabID=109",
       "courts": null,
       "source": "peninsula_community_center"
+    },
+    {
+      "venue": "Silliman Center",
+      "start": "2026-06-18T15:00-07:00",
+      "end": "2026-06-18T17:30-07:00",
+      "activity": "Drop-In Basketball",
+      "address": "6800 Mowry Ave, Newark, CA 94560",
+      "lat": null,
+      "lon": null,
+      "cost": "$14 per person (drop-in)",
+      "notes": "Combined Court 1 + Court 2 availability at Silliman Center. Court 1: 6:00 AM\u20138:00 AM, 4:00 PM\u20135:30 PM. Court 2: 6:00 AM\u20138:00 AM, 3:00 PM\u20134:00 PM. Scraped from weekly Newark Rec Facebook poster (EasyOCR).",
+      "source_event_url": "https://www.facebook.com/Newarkrec/",
+      "courts": [
+        {
+          "name": "Court 1",
+          "windows": [
+            "6:00 AM\u20138:00 AM",
+            "4:00 PM\u20135:30 PM"
+          ]
+        },
+        {
+          "name": "Court 2",
+          "windows": [
+            "6:00 AM\u20138:00 AM",
+            "3:00 PM\u20134:00 PM"
+          ]
+        }
+      ],
+      "source": "newark_community_center"
     },
     {
       "venue": "Red Morton Community Center",
@@ -299,6 +529,33 @@
       "source": "peninsula_community_center"
     },
     {
+      "venue": "Silliman Center",
+      "start": "2026-06-19T13:00-07:00",
+      "end": "2026-06-19T16:00-07:00",
+      "activity": "Drop-In Basketball",
+      "address": "6800 Mowry Ave, Newark, CA 94560",
+      "lat": null,
+      "lon": null,
+      "cost": "$14 per person (drop-in)",
+      "notes": "Combined Court 1 + Court 2 availability at Silliman Center. Court 1: 1:00 PM\u20134:00 PM. Court 2: 4:00 PM\u20138:00 AM. Scraped from weekly Newark Rec Facebook poster (EasyOCR).",
+      "source_event_url": "https://www.facebook.com/Newarkrec/",
+      "courts": [
+        {
+          "name": "Court 1",
+          "windows": [
+            "1:00 PM\u20134:00 PM"
+          ]
+        },
+        {
+          "name": "Court 2",
+          "windows": [
+            "4:00 PM\u20138:00 AM"
+          ]
+        }
+      ],
+      "source": "newark_community_center"
+    },
+    {
       "venue": "Peninsula Community Center",
       "start": "2026-06-19T17:00-07:00",
       "end": "2026-06-19T20:00-07:00",
@@ -313,25 +570,32 @@
       "source": "peninsula_community_center"
     },
     {
-      "venue": "Arrillaga Family Gymnasium",
-      "start": "2026-06-20T07:30-07:00",
-      "end": "2026-06-20T09:30-07:00",
-      "activity": "Court Rental",
-      "address": "600 Alma St, Menlo Park, CA 94025",
+      "venue": "Silliman Center",
+      "start": "2026-06-20T07:00-07:00",
+      "end": "2026-06-20T14:00-07:00",
+      "activity": "Drop-In Basketball",
+      "address": "6800 Mowry Ave, Newark, CA 94560",
       "lat": null,
       "lon": null,
-      "cost": "Free drop-in (or $88.00/hr to reserve)",
-      "notes": "Combined Court 1 availability at Arrillaga Family Gymnasium. Court 1: 7:30 AM\u20139:30 AM. CatchCorner lists these as $88/hr rentals in 2-hour blocks, but if no one books a slot the court is open as free drop-in during the same window.",
-      "source_event_url": "https://www.catchcorner.com/facility-page/embedded/rental/arrillaga-family-gymnasium-city-of-menlo-park/Basketball",
+      "cost": "$14 per person (drop-in)",
+      "notes": "Combined Court 1 + Court 2 availability at Silliman Center. Court 1: 7:00 AM\u20131:00 PM, 3:00 PM\u20134:00 PM. Court 2: 7:00 AM\u20132:00 PM. Scraped from weekly Newark Rec Facebook poster (EasyOCR).",
+      "source_event_url": "https://www.facebook.com/Newarkrec/",
       "courts": [
         {
           "name": "Court 1",
           "windows": [
-            "7:30 AM\u20139:30 AM"
+            "7:00 AM\u20131:00 PM",
+            "3:00 PM\u20134:00 PM"
+          ]
+        },
+        {
+          "name": "Court 2",
+          "windows": [
+            "7:00 AM\u20132:00 PM"
           ]
         }
       ],
-      "source": "arrillaga_family_gymnasium"
+      "source": "newark_community_center"
     },
     {
       "venue": "Red Morton Community Center",
@@ -383,6 +647,34 @@
       "source": "peninsula_community_center"
     },
     {
+      "venue": "Silliman Center",
+      "start": "2026-06-20T15:00-07:00",
+      "end": "2026-06-20T16:00-07:00",
+      "activity": "Drop-In Basketball",
+      "address": "6800 Mowry Ave, Newark, CA 94560",
+      "lat": null,
+      "lon": null,
+      "cost": "$14 per person (drop-in)",
+      "notes": "Combined Court 1 + Court 2 availability at Silliman Center. Court 1: 7:00 AM\u20131:00 PM, 3:00 PM\u20134:00 PM. Court 2: 7:00 AM\u20132:00 PM. Scraped from weekly Newark Rec Facebook poster (EasyOCR).",
+      "source_event_url": "https://www.facebook.com/Newarkrec/",
+      "courts": [
+        {
+          "name": "Court 1",
+          "windows": [
+            "7:00 AM\u20131:00 PM",
+            "3:00 PM\u20134:00 PM"
+          ]
+        },
+        {
+          "name": "Court 2",
+          "windows": [
+            "7:00 AM\u20132:00 PM"
+          ]
+        }
+      ],
+      "source": "newark_community_center"
+    },
+    {
       "venue": "Arrillaga Family Gymnasium",
       "start": "2026-06-21T06:30-07:00",
       "end": "2026-06-21T12:30-07:00",
@@ -402,6 +694,33 @@
         }
       ],
       "source": "arrillaga_family_gymnasium"
+    },
+    {
+      "venue": "Silliman Center",
+      "start": "2026-06-21T07:00-07:00",
+      "end": "2026-06-21T15:30-07:00",
+      "activity": "Drop-In Basketball",
+      "address": "6800 Mowry Ave, Newark, CA 94560",
+      "lat": null,
+      "lon": null,
+      "cost": "$14 per person (drop-in)",
+      "notes": "Combined Court 1 + Court 2 availability at Silliman Center. Court 1: 7:00 AM\u20133:00 PM. Court 2: 7:00 AM\u20133:30 PM. Scraped from weekly Newark Rec Facebook poster (EasyOCR).",
+      "source_event_url": "https://www.facebook.com/Newarkrec/",
+      "courts": [
+        {
+          "name": "Court 1",
+          "windows": [
+            "7:00 AM\u20133:00 PM"
+          ]
+        },
+        {
+          "name": "Court 2",
+          "windows": [
+            "7:00 AM\u20133:30 PM"
+          ]
+        }
+      ],
+      "source": "newark_community_center"
     },
     {
       "venue": "Peninsula Community Center",
@@ -454,22 +773,16 @@
     },
     {
       "venue": "Arrillaga Family Gymnasium",
-      "start": "2026-06-22T16:00-07:00",
+      "start": "2026-06-22T18:00-07:00",
       "end": "2026-06-22T20:30-07:00",
       "activity": "Court Rental",
       "address": "600 Alma St, Menlo Park, CA 94025",
       "lat": null,
       "lon": null,
       "cost": "Free drop-in (or $88.00/hr to reserve)",
-      "notes": "Combined Court 1 + Court 2 availability at Arrillaga Family Gymnasium. Court 1: 4:00 PM\u20138:30 PM. Court 2: 6:00 PM\u20138:30 PM. CatchCorner lists these as $88/hr rentals in 2-hour blocks, but if no one books a slot the court is open as free drop-in during the same window.",
+      "notes": "Combined Court 2 availability at Arrillaga Family Gymnasium. Court 2: 6:00 PM\u20138:30 PM. CatchCorner lists these as $88/hr rentals in 2-hour blocks, but if no one books a slot the court is open as free drop-in during the same window.",
       "source_event_url": "https://www.catchcorner.com/facility-page/embedded/rental/arrillaga-family-gymnasium-city-of-menlo-park/Basketball",
       "courts": [
-        {
-          "name": "Court 1",
-          "windows": [
-            "4:00 PM\u20138:30 PM"
-          ]
-        },
         {
           "name": "Court 2",
           "windows": [
@@ -537,13 +850,13 @@
       "lat": null,
       "lon": null,
       "cost": "Free drop-in (or $88.00/hr to reserve)",
-      "notes": "Combined Court 1 + Court 2 availability at Arrillaga Family Gymnasium. Court 1: 4:00 PM\u20138:30 PM. Court 2: 3:00 PM\u20138:30 PM. CatchCorner lists these as $88/hr rentals in 2-hour blocks, but if no one books a slot the court is open as free drop-in during the same window.",
+      "notes": "Combined Court 1 + Court 2 availability at Arrillaga Family Gymnasium. Court 1: 6:00 PM\u20138:30 PM. Court 2: 3:00 PM\u20138:30 PM. CatchCorner lists these as $88/hr rentals in 2-hour blocks, but if no one books a slot the court is open as free drop-in during the same window.",
       "source_event_url": "https://www.catchcorner.com/facility-page/embedded/rental/arrillaga-family-gymnasium-city-of-menlo-park/Basketball",
       "courts": [
         {
           "name": "Court 1",
           "windows": [
-            "4:00 PM\u20138:30 PM"
+            "6:00 PM\u20138:30 PM"
           ]
         },
         {
@@ -613,15 +926,9 @@
       "lat": null,
       "lon": null,
       "cost": "Free drop-in (or $88.00/hr to reserve)",
-      "notes": "Combined Court 1 + Court 2 availability at Arrillaga Family Gymnasium. Court 1: 4:00 PM\u20136:00 PM. Court 2: 3:00 PM\u20136:00 PM. CatchCorner lists these as $88/hr rentals in 2-hour blocks, but if no one books a slot the court is open as free drop-in during the same window.",
+      "notes": "Combined Court 2 availability at Arrillaga Family Gymnasium. Court 2: 3:00 PM\u20136:00 PM. CatchCorner lists these as $88/hr rentals in 2-hour blocks, but if no one books a slot the court is open as free drop-in during the same window.",
       "source_event_url": "https://www.catchcorner.com/facility-page/embedded/rental/arrillaga-family-gymnasium-city-of-menlo-park/Basketball",
       "courts": [
-        {
-          "name": "Court 1",
-          "windows": [
-            "4:00 PM\u20136:00 PM"
-          ]
-        },
         {
           "name": "Court 2",
           "windows": [
