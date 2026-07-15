@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-14T07:39:32-07:00",
+  "generated_at": "2026-07-15T07:39:10-07:00",
   "window_start": "2026-07-13",
   "window_end": "2026-07-27",
   "weeks": 2,
@@ -174,27 +174,6 @@
         }
       ],
       "source": "newark_community_center"
-    },
-    {
-      "venue": "The Armory",
-      "start": "2026-07-14T18:00-07:00",
-      "end": "2026-07-14T21:30-07:00",
-      "activity": "Drop-In Basketball",
-      "address": "The Armory, 939 Valota Road Redwood City, California 94061",
-      "lat": null,
-      "lon": null,
-      "cost": "$5 adult / $1 youth/teen/senior",
-      "notes": "The single Armory court is open. 6:00 PM\u20139:30 PM. Drop-in; subject to change for rentals or programs.",
-      "source_event_url": "https://www.redwoodcity.org/Home/Components/Calendar/Event/97182/536?curm=7&cury=2026&widgetId=2570",
-      "courts": [
-        {
-          "name": "Court 1",
-          "windows": [
-            "6:00 PM\u20139:30 PM"
-          ]
-        }
-      ],
-      "source": "red_morton_community_center"
     },
     {
       "venue": "Silliman Center",
@@ -453,27 +432,6 @@
       "source": "newark_community_center"
     },
     {
-      "venue": "Arrillaga Family Gymnasium",
-      "start": "2026-07-17T08:30-07:00",
-      "end": "2026-07-17T10:30-07:00",
-      "activity": "Court Rental",
-      "address": "600 Alma St, Menlo Park, CA 94025",
-      "lat": null,
-      "lon": null,
-      "cost": "Free drop-in (or $88.00/hr to reserve)",
-      "notes": "Combined Court 1 availability at Arrillaga Family Gymnasium. Court 1: 8:30 AM\u201310:30 AM. CatchCorner lists these as $88/hr rentals in 2-hour blocks, but if no one books a slot the court is open as free drop-in during the same window.",
-      "source_event_url": "https://www.catchcorner.com/facility-page/embedded/rental/arrillaga-family-gymnasium-city-of-menlo-park/Basketball",
-      "courts": [
-        {
-          "name": "Court 1",
-          "windows": [
-            "8:30 AM\u201310:30 AM"
-          ]
-        }
-      ],
-      "source": "arrillaga_family_gymnasium"
-    },
-    {
       "venue": "Peninsula Community Center",
       "start": "2026-07-17T11:00-07:00",
       "end": "2026-07-17T14:00-07:00",
@@ -588,7 +546,7 @@
       "lon": null,
       "cost": "$5 adult / $1 youth/teen/senior",
       "notes": "The single Armory court is open. 9:00 AM\u20134:30 PM. Drop-in; subject to change for rentals or programs.",
-      "source_event_url": "https://www.redwoodcity.org/Home/Components/Calendar/Event/97182/536?curm=7&cury=2026&widgetId=2570",
+      "source_event_url": "https://www.redwoodcity.org/Home/Components/Calendar/Event/97184/536?curm=7&cury=2026&widgetId=2570",
       "courts": [
         {
           "name": "Court 1",
@@ -858,7 +816,7 @@
       "lon": null,
       "cost": "$5 adult / $1 youth/teen/senior",
       "notes": "The single Armory court is open. 6:00 PM\u20139:30 PM. Drop-in; subject to change for rentals or programs.",
-      "source_event_url": "https://www.redwoodcity.org/Home/Components/Calendar/Event/97182/536?curm=7&cury=2026&widgetId=2570",
+      "source_event_url": "https://www.redwoodcity.org/Home/Components/Calendar/Event/97184/536?curm=7&cury=2026&widgetId=2570",
       "courts": [
         {
           "name": "Court 1",
