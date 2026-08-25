@@ -2,7 +2,7 @@
   "schema_version": 1,
   "source": "red_morton_community_center",
   "source_url": "https://www.redwoodcity.org/departments/parks-recreation-and-community-services/sports/open-gym",
-  "scraped_at": "2026-08-24T07:44:14-07:00",
+  "scraped_at": "2026-08-25T07:47:23-07:00",
   "sessions": [
     {
       "venue": "Red Morton Community Center",
@@ -58,6 +58,26 @@
     },
     {
       "venue": "Red Morton Community Center",
+      "start": "2026-08-25T14:30-07:00",
+      "end": "2026-08-25T18:00-07:00",
+      "activity": "Drop-In Basketball (Half Gym)",
+      "address": "Red Morton Community Center, 1120 Roosevelt Ave Redwood City, California 94061",
+      "lat": null,
+      "lon": null,
+      "cost": "$5 adult / $1 youth/teen/senior",
+      "notes": "Half gym: only Court 1 is open. 2:30 PM\u20136:00 PM. Drop-in; subject to change for rentals or programs.",
+      "source_event_url": "https://www.redwoodcity.org/Home/Components/Calendar/Event/98191/536?curm=8&cury=2026&widgetId=2570",
+      "courts": [
+        {
+          "name": "Court 1",
+          "windows": [
+            "2:30 PM\u20136:00 PM"
+          ]
+        }
+      ]
+    },
+    {
+      "venue": "Red Morton Community Center",
       "start": "2026-08-26T08:00-07:00",
       "end": "2026-08-26T14:30-07:00",
       "activity": "Drop-In Basketball (Half Gym)",
@@ -66,7 +86,7 @@
       "lon": null,
       "cost": "$5 adult / $1 youth/teen/senior",
       "notes": "Half gym: only Court 1 is open. 8:00 AM\u20132:30 PM. Drop-in; subject to change for rentals or programs.",
-      "source_event_url": "https://www.redwoodcity.org/Home/Components/Calendar/Event/98216/536?curm=8&cury=2026&widgetId=2570",
+      "source_event_url": "https://www.redwoodcity.org/Home/Components/Calendar/Event/98191/536?curm=8&cury=2026&widgetId=2570",
       "courts": [
         {
           "name": "Court 1",
@@ -112,7 +132,7 @@
       "lon": null,
       "cost": "$5 adult / $1 youth/teen/senior",
       "notes": "Half gym: only Court 1 is open. 8:00 AM\u20132:30 PM. Drop-in; subject to change for rentals or programs.",
-      "source_event_url": "https://www.redwoodcity.org/Home/Components/Calendar/Event/98216/536?curm=8&cury=2026&widgetId=2570",
+      "source_event_url": "https://www.redwoodcity.org/Home/Components/Calendar/Event/98191/536?curm=8&cury=2026&widgetId=2570",
       "courts": [
         {
           "name": "Court 1",
@@ -184,7 +204,7 @@
       "lon": null,
       "cost": "$5 adult / $1 youth/teen/senior",
       "notes": "Half gym: only Court 1 is open. 8:00 AM\u20132:45 PM. Drop-in; subject to change for rentals or programs.",
-      "source_event_url": "https://www.redwoodcity.org/Home/Components/Calendar/Event/98216/536?curm=8&cury=2026&widgetId=2570",
+      "source_event_url": "https://www.redwoodcity.org/Home/Components/Calendar/Event/98191/536?curm=8&cury=2026&widgetId=2570",
       "courts": [
         {
           "name": "Court 1",

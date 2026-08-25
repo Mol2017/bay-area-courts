@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-24T07:44:15-07:00",
+  "generated_at": "2026-08-25T07:47:24-07:00",
   "window_start": "2026-08-24",
   "window_end": "2026-09-07",
   "weeks": 2,
@@ -141,6 +141,27 @@
       "source": "peninsula_community_center"
     },
     {
+      "venue": "Red Morton Community Center",
+      "start": "2026-08-25T14:30-07:00",
+      "end": "2026-08-25T18:00-07:00",
+      "activity": "Drop-In Basketball (Half Gym)",
+      "address": "Red Morton Community Center, 1120 Roosevelt Ave Redwood City, California 94061",
+      "lat": null,
+      "lon": null,
+      "cost": "$5 adult / $1 youth/teen/senior",
+      "notes": "Half gym: only Court 1 is open. 2:30 PM\u20136:00 PM. Drop-in; subject to change for rentals or programs.",
+      "source_event_url": "https://www.redwoodcity.org/Home/Components/Calendar/Event/98191/536?curm=8&cury=2026&widgetId=2570",
+      "courts": [
+        {
+          "name": "Court 1",
+          "windows": [
+            "2:30 PM\u20136:00 PM"
+          ]
+        }
+      ],
+      "source": "red_morton_community_center"
+    },
+    {
       "venue": "Silliman Center",
       "start": "2026-08-26T06:00-07:00",
       "end": "2026-08-26T21:00-07:00",
@@ -171,7 +192,7 @@
       "lon": null,
       "cost": "$5 adult / $1 youth/teen/senior",
       "notes": "Half gym: only Court 1 is open. 8:00 AM\u20132:30 PM. Drop-in; subject to change for rentals or programs.",
-      "source_event_url": "https://www.redwoodcity.org/Home/Components/Calendar/Event/98216/536?curm=8&cury=2026&widgetId=2570",
+      "source_event_url": "https://www.redwoodcity.org/Home/Components/Calendar/Event/98191/536?curm=8&cury=2026&widgetId=2570",
       "courts": [
         {
           "name": "Court 1",
@@ -274,7 +295,7 @@
       "lon": null,
       "cost": "$5 adult / $1 youth/teen/senior",
       "notes": "Half gym: only Court 1 is open. 8:00 AM\u20132:30 PM. Drop-in; subject to change for rentals or programs.",
-      "source_event_url": "https://www.redwoodcity.org/Home/Components/Calendar/Event/98216/536?curm=8&cury=2026&widgetId=2570",
+      "source_event_url": "https://www.redwoodcity.org/Home/Components/Calendar/Event/98191/536?curm=8&cury=2026&widgetId=2570",
       "courts": [
         {
           "name": "Court 1",
@@ -284,28 +305,6 @@
         }
       ],
       "source": "red_morton_community_center"
-    },
-    {
-      "venue": "Arrillaga Family Gymnasium",
-      "start": "2026-08-27T08:30-07:00",
-      "end": "2026-08-27T10:30-07:00",
-      "activity": "Court Rental",
-      "address": "600 Alma St, Menlo Park, CA 94025",
-      "lat": null,
-      "lon": null,
-      "cost": "Free drop-in (or $88.00/hr to reserve)",
-      "notes": "Combined Court 2 availability at Arrillaga Family Gymnasium. Court 2: 8:30 AM\u201310:30 AM, 2:00 PM\u20136:00 PM. CatchCorner lists these as $88/hr rentals in 2-hour blocks, but if no one books a slot the court is open as free drop-in during the same window.",
-      "source_event_url": "https://www.catchcorner.com/facility-page/embedded/rental/arrillaga-family-gymnasium-city-of-menlo-park/Basketball",
-      "courts": [
-        {
-          "name": "Court 2",
-          "windows": [
-            "8:30 AM\u201310:30 AM",
-            "2:00 PM\u20136:00 PM"
-          ]
-        }
-      ],
-      "source": "arrillaga_family_gymnasium"
     },
     {
       "venue": "Peninsula Community Center",
@@ -320,28 +319,6 @@
       "source_event_url": "https://clients.mindbodyonline.com/classic/mainclass?studioid=782582&tabID=109",
       "courts": null,
       "source": "peninsula_community_center"
-    },
-    {
-      "venue": "Arrillaga Family Gymnasium",
-      "start": "2026-08-27T14:00-07:00",
-      "end": "2026-08-27T18:00-07:00",
-      "activity": "Court Rental",
-      "address": "600 Alma St, Menlo Park, CA 94025",
-      "lat": null,
-      "lon": null,
-      "cost": "Free drop-in (or $88.00/hr to reserve)",
-      "notes": "Combined Court 2 availability at Arrillaga Family Gymnasium. Court 2: 8:30 AM\u201310:30 AM, 2:00 PM\u20136:00 PM. CatchCorner lists these as $88/hr rentals in 2-hour blocks, but if no one books a slot the court is open as free drop-in during the same window.",
-      "source_event_url": "https://www.catchcorner.com/facility-page/embedded/rental/arrillaga-family-gymnasium-city-of-menlo-park/Basketball",
-      "courts": [
-        {
-          "name": "Court 2",
-          "windows": [
-            "8:30 AM\u201310:30 AM",
-            "2:00 PM\u20136:00 PM"
-          ]
-        }
-      ],
-      "source": "arrillaga_family_gymnasium"
     },
     {
       "venue": "Red Morton Community Center",
@@ -424,27 +401,6 @@
         }
       ],
       "source": "newark_community_center"
-    },
-    {
-      "venue": "Arrillaga Family Gymnasium",
-      "start": "2026-08-28T07:30-07:00",
-      "end": "2026-08-28T10:30-07:00",
-      "activity": "Court Rental",
-      "address": "600 Alma St, Menlo Park, CA 94025",
-      "lat": null,
-      "lon": null,
-      "cost": "Free drop-in (or $88.00/hr to reserve)",
-      "notes": "Combined Court 1 availability at Arrillaga Family Gymnasium. Court 1: 7:30 AM\u201310:30 AM. CatchCorner lists these as $88/hr rentals in 2-hour blocks, but if no one books a slot the court is open as free drop-in during the same window.",
-      "source_event_url": "https://www.catchcorner.com/facility-page/embedded/rental/arrillaga-family-gymnasium-city-of-menlo-park/Basketball",
-      "courts": [
-        {
-          "name": "Court 1",
-          "windows": [
-            "7:30 AM\u201310:30 AM"
-          ]
-        }
-      ],
-      "source": "arrillaga_family_gymnasium"
     },
     {
       "venue": "Red Morton Community Center",
@@ -567,7 +523,7 @@
       "lon": null,
       "cost": "$5 adult / $1 youth/teen/senior",
       "notes": "Half gym: only Court 1 is open. 8:00 AM\u20132:45 PM. Drop-in; subject to change for rentals or programs.",
-      "source_event_url": "https://www.redwoodcity.org/Home/Components/Calendar/Event/98216/536?curm=8&cury=2026&widgetId=2570",
+      "source_event_url": "https://www.redwoodcity.org/Home/Components/Calendar/Event/98191/536?curm=8&cury=2026&widgetId=2570",
       "courts": [
         {
           "name": "Court 1",
@@ -656,9 +612,15 @@
       "lat": null,
       "lon": null,
       "cost": "$14 per person (drop-in)",
-      "notes": "Combined Court 2 availability at Silliman Center. Court 2: 7:00 AM\u20131:30 PM. Scraped from weekly Newark Rec Facebook poster (EasyOCR).",
+      "notes": "Combined Court 1 + Court 2 availability at Silliman Center. Court 1: 7:00 AM\u20131:00 PM. Court 2: 7:00 AM\u20131:30 PM. Scraped from weekly Newark Rec Facebook poster (EasyOCR).",
       "source_event_url": "https://www.facebook.com/Newarkrec/",
       "courts": [
+        {
+          "name": "Court 1",
+          "windows": [
+            "7:00 AM\u20131:00 PM"
+          ]
+        },
         {
           "name": "Court 2",
           "windows": [
