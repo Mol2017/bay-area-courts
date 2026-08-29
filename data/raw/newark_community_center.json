@@ -2,7 +2,7 @@
   "schema_version": 1,
   "source": "newark_community_center",
   "source_url": "https://www.facebook.com/Newarkrec/",
-  "scraped_at": "2026-08-28T16:25:33-07:00",
+  "scraped_at": "2026-08-29T10:32:06-07:00",
   "sessions": [
     {
       "venue": "Silliman Center",
@@ -164,9 +164,15 @@
       "lat": null,
       "lon": null,
       "cost": "$14 per person (drop-in)",
-      "notes": "Combined Court 2 availability at Silliman Center. Court 2: 7:00 AM\u20131:30 PM. Scraped from weekly Newark Rec Facebook poster (EasyOCR).",
+      "notes": "Combined Court 1 + Court 2 availability at Silliman Center. Court 1: 7:00 AM\u20131:00 PM. Court 2: 7:00 AM\u20131:30 PM. Scraped from weekly Newark Rec Facebook poster (EasyOCR).",
       "source_event_url": "https://www.facebook.com/Newarkrec/",
       "courts": [
+        {
+          "name": "Court 1",
+          "windows": [
+            "7:00 AM\u20131:00 PM"
+          ]
+        },
         {
           "name": "Court 2",
           "windows": [
