@@ -2,7 +2,7 @@
   "schema_version": 1,
   "source": "arrillaga_family_gymnasium",
   "source_url": "https://www.catchcorner.com/facility-page/embedded/rental/arrillaga-family-gymnasium-city-of-menlo-park/Basketball",
-  "scraped_at": "2026-09-13T07:11:07-07:00",
+  "scraped_at": "2026-09-14T07:14:23-07:00",
   "sessions": [
     {
       "venue": "Arrillaga Family Gymnasium",
@@ -86,6 +86,224 @@
           "name": "Court 2",
           "windows": [
             "6:30 AM\u20139:30 AM"
+          ]
+        }
+      ]
+    },
+    {
+      "venue": "Arrillaga Family Gymnasium",
+      "start": "2026-09-21T07:30-07:00",
+      "end": "2026-09-21T10:30-07:00",
+      "activity": "Court Rental",
+      "address": "600 Alma St, Menlo Park, CA 94025",
+      "lat": null,
+      "lon": null,
+      "cost": "Free drop-in (or $88.00/hr to reserve)",
+      "notes": "Combined Court 1 + Court 2 availability at Arrillaga Family Gymnasium. Court 1: 7:30 AM\u201310:30 AM. Court 2: 6:30 PM\u20138:30 PM. CatchCorner lists these as $88/hr rentals in 2-hour blocks, but if no one books a slot the court is open as free drop-in during the same window.",
+      "source_event_url": "https://www.catchcorner.com/facility-page/embedded/rental/arrillaga-family-gymnasium-city-of-menlo-park/Basketball",
+      "courts": [
+        {
+          "name": "Court 1",
+          "windows": [
+            "7:30 AM\u201310:30 AM"
+          ]
+        },
+        {
+          "name": "Court 2",
+          "windows": [
+            "6:30 PM\u20138:30 PM"
+          ]
+        }
+      ]
+    },
+    {
+      "venue": "Arrillaga Family Gymnasium",
+      "start": "2026-09-21T18:30-07:00",
+      "end": "2026-09-21T20:30-07:00",
+      "activity": "Court Rental",
+      "address": "600 Alma St, Menlo Park, CA 94025",
+      "lat": null,
+      "lon": null,
+      "cost": "Free drop-in (or $88.00/hr to reserve)",
+      "notes": "Combined Court 1 + Court 2 availability at Arrillaga Family Gymnasium. Court 1: 7:30 AM\u201310:30 AM. Court 2: 6:30 PM\u20138:30 PM. CatchCorner lists these as $88/hr rentals in 2-hour blocks, but if no one books a slot the court is open as free drop-in during the same window.",
+      "source_event_url": "https://www.catchcorner.com/facility-page/embedded/rental/arrillaga-family-gymnasium-city-of-menlo-park/Basketball",
+      "courts": [
+        {
+          "name": "Court 1",
+          "windows": [
+            "7:30 AM\u201310:30 AM"
+          ]
+        },
+        {
+          "name": "Court 2",
+          "windows": [
+            "6:30 PM\u20138:30 PM"
+          ]
+        }
+      ]
+    },
+    {
+      "venue": "Arrillaga Family Gymnasium",
+      "start": "2026-09-22T08:30-07:00",
+      "end": "2026-09-22T10:30-07:00",
+      "activity": "Court Rental",
+      "address": "600 Alma St, Menlo Park, CA 94025",
+      "lat": null,
+      "lon": null,
+      "cost": "Free drop-in (or $88.00/hr to reserve)",
+      "notes": "Combined Court 2 availability at Arrillaga Family Gymnasium. Court 2: 8:30 AM\u201310:30 AM. CatchCorner lists these as $88/hr rentals in 2-hour blocks, but if no one books a slot the court is open as free drop-in during the same window.",
+      "source_event_url": "https://www.catchcorner.com/facility-page/embedded/rental/arrillaga-family-gymnasium-city-of-menlo-park/Basketball",
+      "courts": [
+        {
+          "name": "Court 2",
+          "windows": [
+            "8:30 AM\u201310:30 AM"
+          ]
+        }
+      ]
+    },
+    {
+      "venue": "Arrillaga Family Gymnasium",
+      "start": "2026-09-23T07:30-07:00",
+      "end": "2026-09-23T10:30-07:00",
+      "activity": "Court Rental",
+      "address": "600 Alma St, Menlo Park, CA 94025",
+      "lat": null,
+      "lon": null,
+      "cost": "Free drop-in (or $88.00/hr to reserve)",
+      "notes": "Combined Court 1 + Court 2 availability at Arrillaga Family Gymnasium. Court 1: 7:30 AM\u201310:30 AM. Court 2: 1:00 PM\u20138:30 PM. CatchCorner lists these as $88/hr rentals in 2-hour blocks, but if no one books a slot the court is open as free drop-in during the same window.",
+      "source_event_url": "https://www.catchcorner.com/facility-page/embedded/rental/arrillaga-family-gymnasium-city-of-menlo-park/Basketball",
+      "courts": [
+        {
+          "name": "Court 1",
+          "windows": [
+            "7:30 AM\u201310:30 AM"
+          ]
+        },
+        {
+          "name": "Court 2",
+          "windows": [
+            "1:00 PM\u20138:30 PM"
+          ]
+        }
+      ]
+    },
+    {
+      "venue": "Arrillaga Family Gymnasium",
+      "start": "2026-09-23T13:00-07:00",
+      "end": "2026-09-23T20:30-07:00",
+      "activity": "Court Rental",
+      "address": "600 Alma St, Menlo Park, CA 94025",
+      "lat": null,
+      "lon": null,
+      "cost": "Free drop-in (or $88.00/hr to reserve)",
+      "notes": "Combined Court 1 + Court 2 availability at Arrillaga Family Gymnasium. Court 1: 7:30 AM\u201310:30 AM. Court 2: 1:00 PM\u20138:30 PM. CatchCorner lists these as $88/hr rentals in 2-hour blocks, but if no one books a slot the court is open as free drop-in during the same window.",
+      "source_event_url": "https://www.catchcorner.com/facility-page/embedded/rental/arrillaga-family-gymnasium-city-of-menlo-park/Basketball",
+      "courts": [
+        {
+          "name": "Court 1",
+          "windows": [
+            "7:30 AM\u201310:30 AM"
+          ]
+        },
+        {
+          "name": "Court 2",
+          "windows": [
+            "1:00 PM\u20138:30 PM"
+          ]
+        }
+      ]
+    },
+    {
+      "venue": "Arrillaga Family Gymnasium",
+      "start": "2026-09-24T08:30-07:00",
+      "end": "2026-09-24T10:30-07:00",
+      "activity": "Court Rental",
+      "address": "600 Alma St, Menlo Park, CA 94025",
+      "lat": null,
+      "lon": null,
+      "cost": "Free drop-in (or $88.00/hr to reserve)",
+      "notes": "Combined Court 2 availability at Arrillaga Family Gymnasium. Court 2: 8:30 AM\u201310:30 AM. CatchCorner lists these as $88/hr rentals in 2-hour blocks, but if no one books a slot the court is open as free drop-in during the same window.",
+      "source_event_url": "https://www.catchcorner.com/facility-page/embedded/rental/arrillaga-family-gymnasium-city-of-menlo-park/Basketball",
+      "courts": [
+        {
+          "name": "Court 2",
+          "windows": [
+            "8:30 AM\u201310:30 AM"
+          ]
+        }
+      ]
+    },
+    {
+      "venue": "Arrillaga Family Gymnasium",
+      "start": "2026-09-25T07:30-07:00",
+      "end": "2026-09-25T10:30-07:00",
+      "activity": "Court Rental",
+      "address": "600 Alma St, Menlo Park, CA 94025",
+      "lat": null,
+      "lon": null,
+      "cost": "Free drop-in (or $88.00/hr to reserve)",
+      "notes": "Combined Court 1 availability at Arrillaga Family Gymnasium. Court 1: 7:30 AM\u201310:30 AM. CatchCorner lists these as $88/hr rentals in 2-hour blocks, but if no one books a slot the court is open as free drop-in during the same window.",
+      "source_event_url": "https://www.catchcorner.com/facility-page/embedded/rental/arrillaga-family-gymnasium-city-of-menlo-park/Basketball",
+      "courts": [
+        {
+          "name": "Court 1",
+          "windows": [
+            "7:30 AM\u201310:30 AM"
+          ]
+        }
+      ]
+    },
+    {
+      "venue": "Arrillaga Family Gymnasium",
+      "start": "2026-09-26T07:30-07:00",
+      "end": "2026-09-26T09:30-07:00",
+      "activity": "Court Rental",
+      "address": "600 Alma St, Menlo Park, CA 94025",
+      "lat": null,
+      "lon": null,
+      "cost": "Free drop-in (or $88.00/hr to reserve)",
+      "notes": "Combined Court 1 + Court 2 availability at Arrillaga Family Gymnasium. Court 1: 7:30 AM\u20139:30 AM, 3:00 PM\u20138:30 PM. Court 2: 3:00 PM\u20138:30 PM. CatchCorner lists these as $88/hr rentals in 2-hour blocks, but if no one books a slot the court is open as free drop-in during the same window.",
+      "source_event_url": "https://www.catchcorner.com/facility-page/embedded/rental/arrillaga-family-gymnasium-city-of-menlo-park/Basketball",
+      "courts": [
+        {
+          "name": "Court 1",
+          "windows": [
+            "7:30 AM\u20139:30 AM",
+            "3:00 PM\u20138:30 PM"
+          ]
+        },
+        {
+          "name": "Court 2",
+          "windows": [
+            "3:00 PM\u20138:30 PM"
+          ]
+        }
+      ]
+    },
+    {
+      "venue": "Arrillaga Family Gymnasium",
+      "start": "2026-09-26T15:00-07:00",
+      "end": "2026-09-26T20:30-07:00",
+      "activity": "Court Rental",
+      "address": "600 Alma St, Menlo Park, CA 94025",
+      "lat": null,
+      "lon": null,
+      "cost": "Free drop-in (or $88.00/hr to reserve)",
+      "notes": "Combined Court 1 + Court 2 availability at Arrillaga Family Gymnasium. Court 1: 7:30 AM\u20139:30 AM, 3:00 PM\u20138:30 PM. Court 2: 3:00 PM\u20138:30 PM. CatchCorner lists these as $88/hr rentals in 2-hour blocks, but if no one books a slot the court is open as free drop-in during the same window.",
+      "source_event_url": "https://www.catchcorner.com/facility-page/embedded/rental/arrillaga-family-gymnasium-city-of-menlo-park/Basketball",
+      "courts": [
+        {
+          "name": "Court 1",
+          "windows": [
+            "7:30 AM\u20139:30 AM",
+            "3:00 PM\u20138:30 PM"
+          ]
+        },
+        {
+          "name": "Court 2",
+          "windows": [
+            "3:00 PM\u20138:30 PM"
           ]
         }
       ]
