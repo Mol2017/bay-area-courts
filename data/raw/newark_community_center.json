@@ -2,12 +2,12 @@
   "schema_version": 1,
   "source": "newark_community_center",
   "source_url": "https://www.facebook.com/Newarkrec/",
-  "scraped_at": "2026-09-20T07:11:21-07:00",
+  "scraped_at": "2026-09-21T07:14:26-07:00",
   "sessions": [
     {
       "venue": "Silliman Center",
-      "start": "2026-09-14T06:00-07:00",
-      "end": "2026-09-14T16:00-07:00",
+      "start": "2026-09-21T06:00-07:00",
+      "end": "2026-09-21T16:00-07:00",
       "activity": "Drop-In Basketball",
       "address": "6800 Mowry Ave, Newark, CA 94560",
       "lat": null,
@@ -32,8 +32,8 @@
     },
     {
       "venue": "Silliman Center",
-      "start": "2026-09-15T06:00-07:00",
-      "end": "2026-09-15T15:45-07:00",
+      "start": "2026-09-22T06:00-07:00",
+      "end": "2026-09-22T15:45-07:00",
       "activity": "Drop-In Basketball",
       "address": "6800 Mowry Ave, Newark, CA 94560",
       "lat": null,
@@ -58,8 +58,8 @@
     },
     {
       "venue": "Silliman Center",
-      "start": "2026-09-16T06:00-07:00",
-      "end": "2026-09-16T15:45-07:00",
+      "start": "2026-09-23T06:00-07:00",
+      "end": "2026-09-23T15:45-07:00",
       "activity": "Drop-In Basketball",
       "address": "6800 Mowry Ave, Newark, CA 94560",
       "lat": null,
@@ -86,8 +86,8 @@
     },
     {
       "venue": "Silliman Center",
-      "start": "2026-09-16T17:00-07:00",
-      "end": "2026-09-16T21:00-07:00",
+      "start": "2026-09-23T17:00-07:00",
+      "end": "2026-09-23T21:00-07:00",
       "activity": "Drop-In Basketball",
       "address": "6800 Mowry Ave, Newark, CA 94560",
       "lat": null,
@@ -114,8 +114,8 @@
     },
     {
       "venue": "Silliman Center",
-      "start": "2026-09-17T06:00-07:00",
-      "end": "2026-09-17T16:00-07:00",
+      "start": "2026-09-24T06:00-07:00",
+      "end": "2026-09-24T16:00-07:00",
       "activity": "Drop-In Basketball",
       "address": "6800 Mowry Ave, Newark, CA 94560",
       "lat": null,
@@ -140,8 +140,8 @@
     },
     {
       "venue": "Silliman Center",
-      "start": "2026-09-18T06:00-07:00",
-      "end": "2026-09-18T16:00-07:00",
+      "start": "2026-09-25T06:00-07:00",
+      "end": "2026-09-25T16:00-07:00",
       "activity": "Drop-In Basketball",
       "address": "6800 Mowry Ave, Newark, CA 94560",
       "lat": null,
@@ -167,8 +167,8 @@
     },
     {
       "venue": "Silliman Center",
-      "start": "2026-09-18T20:00-07:00",
-      "end": "2026-09-18T21:00-07:00",
+      "start": "2026-09-25T20:00-07:00",
+      "end": "2026-09-25T21:00-07:00",
       "activity": "Drop-In Basketball",
       "address": "6800 Mowry Ave, Newark, CA 94560",
       "lat": null,
@@ -194,8 +194,8 @@
     },
     {
       "venue": "Silliman Center",
-      "start": "2026-09-19T12:30-07:00",
-      "end": "2026-09-19T16:00-07:00",
+      "start": "2026-09-26T12:30-07:00",
+      "end": "2026-09-26T16:00-07:00",
       "activity": "Drop-In Basketball",
       "address": "6800 Mowry Ave, Newark, CA 94560",
       "lat": null,
@@ -220,14 +220,14 @@
     },
     {
       "venue": "Silliman Center",
-      "start": "2026-09-20T07:00-07:00",
-      "end": "2026-09-20T15:00-07:00",
+      "start": "2026-09-27T07:00-07:00",
+      "end": "2026-09-27T17:30-07:00",
       "activity": "Drop-In Basketball",
       "address": "6800 Mowry Ave, Newark, CA 94560",
       "lat": null,
       "lon": null,
       "cost": "$14 per person (drop-in)",
-      "notes": "Combined Court 1 + Court 2 availability at Silliman Center. Court 1: 7:00 AM\u20133:00 PM. Court 2: 7:00 AM\u20131:30 PM. Scraped from weekly Newark Rec Facebook poster (EasyOCR).",
+      "notes": "Combined Court 1 + Court 2 availability at Silliman Center. Court 1: 7:00 AM\u20133:00 PM. Court 2: 7:00 AM\u20135:30 PM. Scraped from weekly Newark Rec Facebook poster (EasyOCR).",
       "source_event_url": "https://www.facebook.com/Newarkrec/",
       "courts": [
         {
@@ -239,7 +239,7 @@
         {
           "name": "Court 2",
           "windows": [
-            "7:00 AM\u20131:30 PM"
+            "7:00 AM\u20135:30 PM"
           ]
         }
       ]
