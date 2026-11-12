@@ -2,110 +2,64 @@
   "schema_version": 1,
   "source": "red_morton_community_center",
   "source_url": "https://www.redwoodcity.org/departments/parks-recreation-and-community-services/sports/open-gym",
-  "scraped_at": "2026-11-10T06:12:18-08:00",
+  "scraped_at": "2026-11-12T06:11:44-08:00",
   "sessions": [
     {
       "venue": "Red Morton Community Center",
-      "start": "2026-11-09T08:00-08:00",
+      "start": "2026-11-09T10:00-08:00",
       "end": "2026-11-09T14:30-08:00",
       "activity": "Drop-In Basketball (Half Gym)",
       "address": "Red Morton Community Center, 1120 Roosevelt Ave Redwood City, California 94061",
       "lat": null,
       "lon": null,
       "cost": "$5 adult / $1 youth/teen/senior",
-      "notes": "Half gym: only Court 1 is open. 8:00 AM\u20132:30 PM. Drop-in; subject to change for rentals or programs.",
+      "notes": "Half gym: only Court 1 is open. 10:00 AM\u20132:30 PM. Drop-in; subject to change for rentals or programs.",
       "source_event_url": "https://www.redwoodcity.org/Home/Components/Calendar/Event/101533/536?curm=11&cury=2026&widgetId=2570",
       "courts": [
         {
           "name": "Court 1",
           "windows": [
-            "8:00 AM\u20132:30 PM"
+            "10:00 AM\u20132:30 PM"
           ]
         }
       ]
     },
     {
       "venue": "Red Morton Community Center",
-      "start": "2026-11-09T19:30-08:00",
-      "end": "2026-11-09T21:45-08:00",
-      "activity": "Drop-In Basketball (Half Gym)",
-      "address": "Red Morton Community Center, 1120 Roosevelt Ave Redwood City, California 94061",
-      "lat": null,
-      "lon": null,
-      "cost": "$5 adult / $1 youth/teen/senior",
-      "notes": "Half gym: only Court 1 is open. 7:30 PM\u20139:45 PM. Drop-in; subject to change for rentals or programs.",
-      "source_event_url": "https://www.redwoodcity.org/Home/Components/Calendar/Event/101533/536?curm=11&cury=2026&widgetId=2570",
-      "courts": [
-        {
-          "name": "Court 1",
-          "windows": [
-            "7:30 PM\u20139:45 PM"
-          ]
-        }
-      ]
-    },
-    {
-      "venue": "Red Morton Community Center",
-      "start": "2026-11-10T08:00-08:00",
+      "start": "2026-11-10T10:00-08:00",
       "end": "2026-11-10T14:30-08:00",
       "activity": "Drop-In Basketball (Half Gym)",
       "address": "Red Morton Community Center, 1120 Roosevelt Ave Redwood City, California 94061",
       "lat": null,
       "lon": null,
       "cost": "$5 adult / $1 youth/teen/senior",
-      "notes": "Half gym: only Court 1 is open. 8:00 AM\u20132:30 PM. Drop-in; subject to change for rentals or programs.",
+      "notes": "Half gym: only Court 1 is open. 10:00 AM\u20132:30 PM. Drop-in; subject to change for rentals or programs.",
       "source_event_url": "https://www.redwoodcity.org/Home/Components/Calendar/Event/101533/536?curm=11&cury=2026&widgetId=2570",
       "courts": [
         {
           "name": "Court 1",
           "windows": [
-            "8:00 AM\u20132:30 PM"
+            "10:00 AM\u20132:30 PM"
           ]
         }
       ]
     },
     {
       "venue": "Red Morton Community Center",
-      "start": "2026-11-12T08:00-08:00",
+      "start": "2026-11-12T10:00-08:00",
       "end": "2026-11-12T14:30-08:00",
       "activity": "Drop-In Basketball (Half Gym)",
       "address": "Red Morton Community Center, 1120 Roosevelt Ave Redwood City, California 94061",
       "lat": null,
       "lon": null,
       "cost": "$5 adult / $1 youth/teen/senior",
-      "notes": "Half gym: only Court 1 is open. 8:00 AM\u20132:30 PM. Drop-in; subject to change for rentals or programs.",
+      "notes": "Half gym: only Court 1 is open. 10:00 AM\u20132:30 PM. Drop-in; subject to change for rentals or programs.",
       "source_event_url": "https://www.redwoodcity.org/Home/Components/Calendar/Event/101533/536?curm=11&cury=2026&widgetId=2570",
       "courts": [
         {
           "name": "Court 1",
           "windows": [
-            "8:00 AM\u20132:30 PM"
-          ]
-        }
-      ]
-    },
-    {
-      "venue": "Red Morton Community Center",
-      "start": "2026-11-13T08:00-08:00",
-      "end": "2026-11-13T14:30-08:00",
-      "activity": "Drop-In Basketball (Full Gym)",
-      "address": "Red Morton Community Center, 1120 Roosevelt Ave Redwood City, California 94061",
-      "lat": null,
-      "lon": null,
-      "cost": "$5 adult / $1 youth/teen/senior",
-      "notes": "Full gym: both Court 1 and Court 2 are open. 8:00 AM\u20132:30 PM. Drop-in; subject to change for rentals or programs.",
-      "source_event_url": "https://www.redwoodcity.org/Home/Components/Calendar/Event/101531/536?curm=11&cury=2026&widgetId=2570",
-      "courts": [
-        {
-          "name": "Court 1",
-          "windows": [
-            "8:00 AM\u20132:30 PM"
-          ]
-        },
-        {
-          "name": "Court 2",
-          "windows": [
-            "8:00 AM\u20132:30 PM"
+            "10:00 AM\u20132:30 PM"
           ]
         }
       ]
@@ -204,80 +158,20 @@
     },
     {
       "venue": "Red Morton Community Center",
-      "start": "2026-11-16T19:30-08:00",
-      "end": "2026-11-16T21:45-08:00",
-      "activity": "Drop-In Basketball (Half Gym)",
-      "address": "Red Morton Community Center, 1120 Roosevelt Ave Redwood City, California 94061",
-      "lat": null,
-      "lon": null,
-      "cost": "$5 adult / $1 youth/teen/senior",
-      "notes": "Half gym: only Court 1 is open. 7:30 PM\u20139:45 PM. Drop-in; subject to change for rentals or programs.",
-      "source_event_url": "https://www.redwoodcity.org/Home/Components/Calendar/Event/101533/536?curm=11&cury=2026&widgetId=2570",
-      "courts": [
-        {
-          "name": "Court 1",
-          "windows": [
-            "7:30 PM\u20139:45 PM"
-          ]
-        }
-      ]
-    },
-    {
-      "venue": "Red Morton Community Center",
-      "start": "2026-11-17T08:00-08:00",
-      "end": "2026-11-17T14:30-08:00",
-      "activity": "Drop-In Basketball (Half Gym)",
-      "address": "Red Morton Community Center, 1120 Roosevelt Ave Redwood City, California 94061",
-      "lat": null,
-      "lon": null,
-      "cost": "$5 adult / $1 youth/teen/senior",
-      "notes": "Half gym: only Court 1 is open. 8:00 AM\u20132:30 PM. Drop-in; subject to change for rentals or programs.",
-      "source_event_url": "https://www.redwoodcity.org/Home/Components/Calendar/Event/101533/536?curm=11&cury=2026&widgetId=2570",
-      "courts": [
-        {
-          "name": "Court 1",
-          "windows": [
-            "8:00 AM\u20132:30 PM"
-          ]
-        }
-      ]
-    },
-    {
-      "venue": "Red Morton Community Center",
-      "start": "2026-11-18T08:00-08:00",
-      "end": "2026-11-18T14:30-08:00",
-      "activity": "Drop-In Basketball (Half Gym)",
-      "address": "Red Morton Community Center, 1120 Roosevelt Ave Redwood City, California 94061",
-      "lat": null,
-      "lon": null,
-      "cost": "$5 adult / $1 youth/teen/senior",
-      "notes": "Half gym: only Court 1 is open. 8:00 AM\u20132:30 PM. Drop-in; subject to change for rentals or programs.",
-      "source_event_url": "https://www.redwoodcity.org/Home/Components/Calendar/Event/101533/536?curm=11&cury=2026&widgetId=2570",
-      "courts": [
-        {
-          "name": "Court 1",
-          "windows": [
-            "8:00 AM\u20132:30 PM"
-          ]
-        }
-      ]
-    },
-    {
-      "venue": "Red Morton Community Center",
-      "start": "2026-11-19T08:00-08:00",
+      "start": "2026-11-19T10:00-08:00",
       "end": "2026-11-19T14:30-08:00",
       "activity": "Drop-In Basketball (Half Gym)",
       "address": "Red Morton Community Center, 1120 Roosevelt Ave Redwood City, California 94061",
       "lat": null,
       "lon": null,
       "cost": "$5 adult / $1 youth/teen/senior",
-      "notes": "Half gym: only Court 1 is open. 8:00 AM\u20132:30 PM. Drop-in; subject to change for rentals or programs.",
+      "notes": "Half gym: only Court 1 is open. 10:00 AM\u20132:30 PM. Drop-in; subject to change for rentals or programs.",
       "source_event_url": "https://www.redwoodcity.org/Home/Components/Calendar/Event/101533/536?curm=11&cury=2026&widgetId=2570",
       "courts": [
         {
           "name": "Court 1",
           "windows": [
-            "8:00 AM\u20132:30 PM"
+            "10:00 AM\u20132:30 PM"
           ]
         }
       ]
@@ -285,25 +179,25 @@
     {
       "venue": "Red Morton Community Center",
       "start": "2026-11-20T08:00-08:00",
-      "end": "2026-11-20T14:30-08:00",
+      "end": "2026-11-20T10:00-08:00",
       "activity": "Drop-In Basketball (Full Gym)",
       "address": "Red Morton Community Center, 1120 Roosevelt Ave Redwood City, California 94061",
       "lat": null,
       "lon": null,
       "cost": "$5 adult / $1 youth/teen/senior",
-      "notes": "Full gym: both Court 1 and Court 2 are open. 8:00 AM\u20132:30 PM. Drop-in; subject to change for rentals or programs.",
+      "notes": "Full gym: both Court 1 and Court 2 are open. 8:00 AM\u201310:00 AM. Drop-in; subject to change for rentals or programs.",
       "source_event_url": "https://www.redwoodcity.org/Home/Components/Calendar/Event/101531/536?curm=11&cury=2026&widgetId=2570",
       "courts": [
         {
           "name": "Court 1",
           "windows": [
-            "8:00 AM\u20132:30 PM"
+            "8:00 AM\u201310:00 AM"
           ]
         },
         {
           "name": "Court 2",
           "windows": [
-            "8:00 AM\u20132:30 PM"
+            "8:00 AM\u201310:00 AM"
           ]
         }
       ]
