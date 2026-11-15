@@ -2,7 +2,7 @@
   "schema_version": 1,
   "source": "peninsula_community_center",
   "source_url": "https://clients.mindbodyonline.com/classic/mainclass?studioid=782582&tabID=109",
-  "scraped_at": "2026-11-14T06:07:45-08:00",
+  "scraped_at": "2026-11-15T06:07:32-08:00",
   "sessions": [
     {
       "venue": "Peninsula Community Center",
@@ -156,7 +156,7 @@
       "lat": null,
       "lon": null,
       "cost": "$55 per person (drop-in)",
-      "notes": "Room: Center Gym",
+      "notes": "Room: Cancelled Today",
       "source_event_url": "https://clients.mindbodyonline.com/classic/mainclass?studioid=782582&tabID=109",
       "courts": null
     },
